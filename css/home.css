@@ -304,8 +304,8 @@ body { background: var(--bg-base); overflow-x: hidden; }
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(8,5,18,0.6) 0%, rgba(10,7,20,0.26) 46%, rgba(10,7,20,0.04) 100%),
-    linear-gradient(180deg, rgba(10,7,20,0.42) 0%, rgba(10,7,20,0.28) 45%, rgba(10,7,20,0.66) 86%, var(--bg-base) 100%);
+    linear-gradient(90deg, rgba(6,4,14,0.82) 0%, rgba(8,5,18,0.5) 55%, rgba(8,5,18,0.12) 100%),
+    linear-gradient(180deg, rgba(8,5,18,0.55) 0%, rgba(8,5,18,0.4) 45%, rgba(8,5,18,0.72) 86%, var(--bg-base) 100%);
 }
 @media (prefers-reduced-motion: reduce) {
   .cdo-videostage__vloop { display: none; }

@@ -77,6 +77,11 @@
   .cdo-hero-servicio { grid-template-columns: minmax(0, 1fr) 340px; gap: var(--space-8); }
 }
 .cdo-hero-servicio__main { min-width: 0; }
+/* legibilidad del texto del hero sobre el video (que puede aclararse) */
+.cdo-hero-servicio h1,
+.cdo-hero-servicio__sub,
+.cdo-hero-servicio__lead { text-shadow: 0 2px 16px rgba(6, 4, 14, 0.6); }
+.cdo-hero-servicio__sub .gold-accent { text-shadow: 0 2px 16px rgba(6, 4, 14, 0.75); }
 
 /* Foto de Clara en el hero (llena el costado, en vez del chat de WhatsApp).
    En mobile va debajo del botón; en desktop, a la derecha. */
@@ -470,7 +475,7 @@
 .cdo-faq__item p {
   margin: 0;
   padding: 0 var(--space-6) var(--space-5);
-  color: var(--cream-200); /* crema limpio: buena legibilidad, sin el tono marrón */
+  color: var(--text-body); /* crema claro, buen contraste */
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -660,3 +665,6 @@
 .cdo-author-block { border-top: 1px solid var(--border-hairline); }
 .cdo-servicedesc--portrait .cdo-servicedesc__media img { aspect-ratio: 4 / 5; object-position: 50% 14%; }
 @media (min-width: 860px) { .cdo-servicedesc--portrait .cdo-servicedesc__media img { aspect-ratio: 4 / 5; } }
+
+/* leads del contenido interno: más brillo (mejor contraste que el muted beige) */
+.cdo-content .sec-head__lead { color: var(--cream-200); }
