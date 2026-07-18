@@ -568,3 +568,66 @@
   margin: 0 0 var(--space-5);
 }
 .cdo-servicedesc__text p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   CRO: micro-CTA, prueba social, urgencia
+   ============================================================ */
+/* variante espejo para alternar imagen/texto */
+@media (min-width: 860px) {
+  .cdo-servicedesc--reverse { grid-template-columns: minmax(0, 1fr) 360px; }
+  .cdo-servicedesc--reverse .cdo-servicedesc__media { order: 2; }
+}
+
+/* micro-CTA debajo de los bullets (máxima intención) */
+.cdo-microcta {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(241, 216, 150, 0.07), rgba(207, 162, 74, 0.02));
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--space-5);
+}
+.cdo-microcta__text { margin: 0; font-size: 1.15rem; color: var(--text-heading); font-weight: 600; line-height: 1.4; max-width: 34ch; }
+.cdo-microcta__text .gold-accent { color: var(--text-gold); }
+@media (max-width: 640px) { .cdo-microcta { flex-direction: column; align-items: stretch; text-align: center; } .cdo-microcta .wa-btn { width: 100%; justify-content: center; } }
+
+/* prueba social: Instagram + TikTok */
+.cdo-socialproof { padding: var(--space-6) 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); }
+.cdo-socialproof__inner { display: flex; flex-wrap: wrap; gap: var(--space-5) var(--space-8); align-items: center; justify-content: center; text-align: center; }
+.cdo-socialproof__intro { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+.cdo-socialproof__intro strong { color: var(--text-heading); }
+.cdo-social {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--border-hairline); border-radius: var(--radius-pill);
+  color: var(--text-body); text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+.cdo-social:hover { border-color: var(--border-gold); background: rgba(241, 216, 150, 0.05); }
+.cdo-social__ico { width: 26px; height: 26px; color: var(--gold-300); flex: 0 0 auto; }
+.cdo-social__num { font-family: var(--font-display); font-weight: var(--fw-extra); color: var(--text-heading); font-size: 1.15rem; line-height: 1; }
+.cdo-social__lbl { display: block; font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+
+/* microcopy de urgencia bajo los CTA */
+.cdo-urgency { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--space-4); font-size: 0.9rem; color: var(--gold-300); }
+.cdo-urgency::before { content: "🕯️"; font-size: 0.95rem; }
+
+/* burbuja de cupos en el floater */
+.cdo-cupos-bubble {
+  position: fixed; right: 92px; bottom: 34px; z-index: var(--z-floating, 60);
+  max-width: 230px; padding: 0.8rem 2rem 0.8rem 1rem;
+  background: var(--surface-1, #17111f); color: var(--text-body);
+  border: 1px solid var(--border-gold); border-radius: 14px;
+  box-shadow: var(--shadow-lg); font-size: 0.9rem; line-height: 1.35;
+  opacity: 0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease; pointer-events: none;
+}
+.cdo-cupos-bubble.is-show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.cdo-cupos-bubble strong { color: var(--gold-300); }
+.cdo-cupos-bubble__x { position: absolute; top: 4px; right: 8px; cursor: pointer; color: var(--text-faint); font-size: 1.1rem; line-height: 1; background: none; border: 0; }
+@media (max-width: 480px) { .cdo-cupos-bubble { right: 80px; bottom: 30px; max-width: 200px; } }
+
+/* ¿Cómo trabajo?: separador + foto retrato (muestra bien a Clara) */
+.cdo-author-block { border-top: 1px solid var(--border-hairline); }
+.cdo-servicedesc--portrait .cdo-servicedesc__media img { aspect-ratio: 4 / 5; object-position: 50% 14%; }
+@media (min-width: 860px) { .cdo-servicedesc--portrait .cdo-servicedesc__media img { aspect-ratio: 4 / 5; } }
