@@ -6,12 +6,12 @@
    ============================================================ */
 :root {
   /* --- Warm blacks (backgrounds) --- */
-  --ink-950: #0B0605;   /* deepest — page base */
-  --ink-900: #130A08;
-  --ink-850: #1A0D0A;
-  --ink-800: #22110D;   /* raised surface */
-  --ink-750: #2B1512;   /* card / elevated */
-  --ink-700: #381A16;   /* hairline on dark */
+  --ink-950: #080610;   /* deepest — violet-black (unificado con la base) */
+  --ink-900: #100B1C;
+  --ink-850: #170F28;
+  --ink-800: #1E1434;   /* raised surface (violeta) */
+  --ink-750: #261942;   /* card / elevated (violeta) */
+  --ink-700: #33245A;   /* hairline on dark (violeta) */
 
   /* --- Blue-violet / purple (primary accent family) — matches the video --- */
   --wine-950: #17092E;  /* deep violet-black */
