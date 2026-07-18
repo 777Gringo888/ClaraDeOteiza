@@ -118,7 +118,7 @@
           '<p class="cdo-result__kicker">Te puede servir</p>' +
           '<div class="cdo-result__pages">' + pages + '</div>' +
           '<a class="wa-btn wa-btn--sm cdo-result__wa" href="' + esc(waFor(data)) + '" target="_blank" rel="noopener noreferrer">' +
-            waGlyph(18) + 'Reservá tu consulta gratis de la semana</a>';
+            waGlyph(18) + 'Reservá tu consulta gratis</a>';
       }
       resultEl.innerHTML = html;
       resultEl.hidden = false;
