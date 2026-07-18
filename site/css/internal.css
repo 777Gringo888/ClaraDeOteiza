@@ -613,19 +613,37 @@
 .cdo-urgency { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--space-4); font-size: 0.9rem; color: var(--gold-300); }
 .cdo-urgency::before { content: "🕯️"; font-size: 0.95rem; }
 
-/* burbuja de cupos en el floater */
-.cdo-cupos-bubble {
-  position: fixed; right: 92px; bottom: 34px; z-index: var(--z-floating, 60);
-  max-width: 230px; padding: 0.8rem 2rem 0.8rem 1rem;
-  background: var(--surface-1, #17111f); color: var(--text-body);
-  border: 1px solid var(--border-gold); border-radius: 14px;
-  box-shadow: var(--shadow-lg); font-size: 0.9rem; line-height: 1.35;
-  opacity: 0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease; pointer-events: none;
+/* párrafo destacado: Clara afirma su poder (cierra el "¿qué es?") */
+.cdo-affirm {
+  margin-top: var(--space-5) !important;
+  padding: var(--space-4) var(--space-5);
+  border-left: 3px solid var(--gold-500);
+  background: linear-gradient(90deg, rgba(241, 216, 150, 0.07), rgba(241, 216, 150, 0));
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-family: var(--font-display);
+  font-size: 1.22rem !important;
+  font-weight: 600;
+  color: var(--text-heading) !important;
+  line-height: 1.5 !important;
 }
-.cdo-cupos-bubble.is-show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* burbuja de cupos: sale ARRIBA del floater, estilo derivador (violeta + dorado) */
+.cdo-cupos-bubble {
+  position: fixed; right: 24px; bottom: 96px; z-index: var(--z-floating, 60);
+  max-width: 250px; padding: 0.85rem 2rem 0.85rem 1rem;
+  background: linear-gradient(160deg, rgba(110, 52, 206, 0.42), rgba(18, 10, 34, 0.96));
+  color: var(--text-body);
+  border: 1px solid var(--border-gold); border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5), 0 0 24px rgba(110, 52, 206, 0.35);
+  font-size: 0.92rem; line-height: 1.4;
+  opacity: 0; transform: translateY(12px) scale(0.96); transform-origin: bottom right;
+  transition: opacity .45s var(--ease-out), transform .45s var(--ease-out); pointer-events: none;
+  cursor: pointer;
+}
+.cdo-cupos-bubble.is-show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
 .cdo-cupos-bubble strong { color: var(--gold-300); }
-.cdo-cupos-bubble__x { position: absolute; top: 4px; right: 8px; cursor: pointer; color: var(--text-faint); font-size: 1.1rem; line-height: 1; background: none; border: 0; }
-@media (max-width: 480px) { .cdo-cupos-bubble { right: 80px; bottom: 30px; max-width: 200px; } }
+.cdo-cupos-bubble__x { position: absolute; top: 5px; right: 9px; cursor: pointer; color: var(--cream-200); font-size: 1.15rem; line-height: 1; background: none; border: 0; }
+@media (max-width: 480px) { .cdo-cupos-bubble { right: 18px; bottom: 88px; max-width: 220px; } }
 
 /* ¿Cómo trabajo?: separador + foto retrato (muestra bien a Clara) */
 .cdo-author-block { border-top: 1px solid var(--border-hairline); }
