@@ -196,6 +196,41 @@
 }
 .cdo-gallery figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
 
+/* ---- Contenido en filas de imagen + texto (alternadas) ---- */
+.cdo-features { padding: var(--section-y) 0; }
+.cdo-features__wrap { display: grid; gap: var(--space-8); }
+.cdo-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+@media (min-width: 820px) {
+  .cdo-feature { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+  /* filas pares: la imagen va a la derecha */
+  .cdo-feature--flip .cdo-feature__media { order: 2; }
+}
+.cdo-feature__media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-md);
+}
+.cdo-feature__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cdo-feature__body h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--text-heading);
+  line-height: 1.15;
+  margin: 0 0 var(--space-4);
+}
+.cdo-feature__body h2 .gold-accent { color: var(--text-gold); }
+.cdo-feature__body p { color: var(--text-body); font-size: 1.05rem; line-height: 1.7; margin: 0 0 var(--space-4); }
+.cdo-feature__body p:last-child { margin-bottom: 0; }
+.cdo-feature__body .cdo-signals { margin-bottom: 0; }
+.cdo-features__cta { text-align: center; margin-top: var(--space-4); }
+
 /* ---- Lista de señales (cuándo te puede ayudar) ---- */
 .cdo-signals { list-style: none; margin: var(--space-4) 0 var(--space-6); padding: 0; display: grid; gap: var(--space-3); }
 .cdo-signals li {
