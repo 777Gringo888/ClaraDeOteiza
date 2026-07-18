@@ -154,6 +154,8 @@
 }
 
 .cdo-prose { max-width: 68ch; }
+.cdo-content__single .cdo-prose { max-width: 74ch; margin-inline: auto; }
+.cdo-prose__cta { clear: both; margin-top: var(--space-7); text-align: center; }
 .cdo-prose h2 {
   font-family: var(--font-display);
   font-size: var(--fs-h3);
