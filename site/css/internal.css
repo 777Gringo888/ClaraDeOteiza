@@ -300,7 +300,7 @@
 /* ---- Aside (magia blanca + CTA lateral) ---- */
 .cdo-aside { display: grid; gap: var(--space-5); align-content: start; }
 .cdo-aside__card {
-  background: linear-gradient(180deg, rgba(43,21,18,0.7), rgba(19,10,8,0.7));
+  background: linear-gradient(180deg, rgba(110, 52, 206, 0.12), rgba(20, 12, 38, 0.7));
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -335,8 +335,8 @@
 .cdo-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(43,21,18,0.55), rgba(19,10,8,0.55));
-  border: 1px solid var(--border-hairline);
+  background: linear-gradient(180deg, rgba(110, 52, 206, 0.12), rgba(20, 12, 38, 0.55));
+  border: 1px solid rgba(138, 84, 224, 0.28);
   border-radius: var(--radius-lg);
   overflow: hidden;
   text-decoration: none;
