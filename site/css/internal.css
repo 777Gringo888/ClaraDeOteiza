@@ -111,7 +111,7 @@
   font-family: var(--font-display);
   /* nombre del ritual bien grande (títulos cortos); los largos escalan por vw */
   font-size: clamp(2.6rem, 8vw, 4.4rem);
-  font-weight: var(--fw-bold); /* 700, no 800: más elegante y menos pesado */
+  font-weight: var(--fw-extra); /* hero en bold, con destaque */
   line-height: 1.02;
   letter-spacing: -0.01em;
   color: var(--text-heading);
@@ -159,16 +159,19 @@
 .cdo-prose__cta { clear: both; margin-top: var(--space-7); text-align: center; }
 .cdo-prose h2 {
   font-family: var(--font-display);
-  /* más presencia: acompaña la escala del hero sin competir con el H1 */
-  font-size: clamp(1.8rem, 4.6vw, 2.3rem);
-  font-weight: var(--fw-bold); /* 700, no 800: subtítulos del contenido más livianos */
+  /* pregunta grande, escala cercana al hero */
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: var(--fw-semibold); /* base semibold; la palabra clave va en bold+dorado */
   color: var(--text-heading);
-  margin: var(--space-8) 0 var(--space-4);
+  /* más aire arriba (separa secciones) y abajo (despega de la imagen) */
+  margin: var(--space-10) 0 var(--space-6);
   line-height: 1.15;
+  letter-spacing: -0.01em;
   clear: both; /* que cada sección arranque debajo de la foto flotante */
 }
 .cdo-prose h2:first-child { margin-top: 0; }
-.cdo-prose h2 .gold-accent { color: var(--text-gold); }
+/* palabra clave del título: destacada en dorado + bold */
+.cdo-prose h2 .gold-accent { color: var(--text-gold); font-weight: var(--fw-extra); }
 .cdo-prose p {
   color: var(--text-body);
   font-size: 1.15rem;
@@ -219,7 +222,7 @@
     float: left;
     width: 300px;
     max-width: none;
-    margin: var(--space-1) var(--space-6) var(--space-3) 0;
+    margin: var(--space-2) var(--space-7) var(--space-6) 0;
   }
   .cdo-figure figcaption { text-align: left; }
 }
@@ -374,13 +377,18 @@
 .cdo-author__body .badge { margin-bottom: var(--space-4); }
 .cdo-author__name {
   font-family: var(--font-display);
-  font-size: var(--fs-h3);
+  font-size: clamp(1.9rem, 4.5vw, 2.4rem);
+  font-weight: var(--fw-semibold);
   color: var(--text-heading);
-  margin: 0 0 var(--space-1);
+  margin: 0 0 var(--space-4);
   line-height: 1.1;
+  letter-spacing: -0.01em;
 }
+.cdo-author__name .gold-accent { color: var(--text-gold); font-weight: var(--fw-extra); }
+.cdo-author__cta { margin-top: var(--space-6); }
 .cdo-author__role { color: var(--text-gold); font-size: 1.05rem; margin: 0 0 var(--space-4); }
-.cdo-author__body p { color: var(--text-body); line-height: 1.7; margin: 0 0 var(--space-4); }
+.cdo-author__body p { color: var(--text-body); font-size: 1.1rem; line-height: 1.75; margin: 0 0 var(--space-4); }
+.cdo-author__body p strong { color: var(--text-heading); font-weight: 600; }
 .cdo-author__body p:last-child { margin-bottom: 0; }
 
 /* ---- Páginas relacionadas (enlazado interno para SEO) ---- */
