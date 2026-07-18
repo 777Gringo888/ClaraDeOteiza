@@ -14,72 +14,67 @@
       id: "alejo", label: "Mi pareja se alejó",
       intro: "Cuando alguien que amás se aleja, la incertidumbre pesa. Puedo ayudarte a trabajar el vínculo para reabrir el diálogo y el acercamiento.",
       pages: [
-        P("/amarres/amarres-de-amor/", "Amarres de amor"),
-        P("/amor-y-parejas/retorno-de-pareja/", "Retorno de pareja"),
-        P("/amor-y-parejas/reconexion-afectiva/", "Reconexión afectiva")
+        P("/ClaraDeOteiza/amarres/retorno-de-pareja/", "Retorno de pareja"),
+        P("/ClaraDeOteiza/amarres/amarres-de-amor/", "Amarres de amor"),
+        P("/ClaraDeOteiza/amarres/", "Ver todos los trabajos de amor")
       ]
     },
     {
       id: "recuperar", label: "Quiero recuperar a alguien",
       intro: "Recuperar un vínculo empieza por entender qué se rompió. Evalúo tu caso antes de recomendarte cualquier trabajo.",
       pages: [
-        P("/amor-y-parejas/retorno-de-pareja/", "Retorno de pareja"),
-        P("/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno"),
-        P("/amor-y-parejas/union-de-pareja/", "Unión de pareja")
+        P("/ClaraDeOteiza/amarres/amarres-de-amor/", "Amarres de amor"),
+        P("/ClaraDeOteiza/amarres/reconciliacion-de-pareja/", "Reconciliación de pareja"),
+        P("/ClaraDeOteiza/amarres/", "Ver todos los trabajos de amor")
       ]
     },
     {
       id: "infiel", label: "Creo que me engaña",
       intro: "Cuando algo no cierra, primero conviene ver con claridad qué está pasando. Te hago una lectura y, si hay un tercero, trabajo el alejamiento y la reconexión de tu vínculo.",
       pages: [
-        P("/tarot-y-videncia/videncia-natural/", "Videncia natural"),
-        P("/amor-y-parejas/alejamiento-de-terceros/", "Alejamiento de terceros"),
-        P("/amor-y-parejas/retorno-de-pareja/", "Retorno de pareja")
+        P("/ClaraDeOteiza/tarot-y-videncia/videncia/", "Videncia: saber la verdad"),
+        P("/ClaraDeOteiza/amarres/alejamiento-de-terceros-y-amantes/", "Alejamiento de terceros y amantes")
       ]
     },
     {
       id: "fortalecer", label: "Quiero fortalecer mi relación",
       intro: "Una relación se cuida. Puedo acompañarte con trabajos de armonía y acercamiento para reforzar el vínculo que ya tenés.",
       pages: [
-        P("/amor-y-parejas/endulzamientos/", "Endulzamientos"),
-        P("/amor-y-parejas/armonizacion-de-vinculos/", "Armonización de vínculos"),
-        P("/amor-y-parejas/fortalecimiento-de-pareja/", "Fortalecimiento de pareja")
+        P("/ClaraDeOteiza/amarres/endulzamiento/", "Endulzamiento"),
+        P("/ClaraDeOteiza/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno")
       ]
     },
     {
       id: "trabajo", label: "Creo que me hicieron un trabajo",
       intro: "Si sentís que algo externo te está afectando, lo evalúo y, si corresponde, corto y limpio esa energía.",
       pages: [
-        P("/limpiezas-proteccion-y-destrabe/corte-de-danos/", "Corte de daños"),
-        P("/limpiezas-proteccion-y-destrabe/desamarres/", "Desamarres"),
-        P("/limpiezas-proteccion-y-destrabe/limpiezas-energeticas/", "Limpiezas energéticas")
+        P("/ClaraDeOteiza/rituales-y-trabajos/te-hicieron-un-trabajo/", "¿Te hicieron un trabajo?"),
+        P("/ClaraDeOteiza/rituales-y-trabajos/corte-de-danos/", "Anti-brujería y corte de daños"),
+        P("/ClaraDeOteiza/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética")
       ]
     },
     {
       id: "claridad", label: "Necesito claridad sobre mi futuro",
       intro: "Cuando no sabés qué camino tomar, te hago una lectura para ver con más claridad y decidir con calma.",
       pages: [
-        P("/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot"),
-        P("/tarot-y-videncia/videncia-natural/", "Videncia natural"),
-        P("/tarot-y-videncia/tarot-del-amor/", "Tarot del amor")
+        P("/ClaraDeOteiza/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot"),
+        P("/ClaraDeOteiza/tarot-y-videncia/orientacion-espiritual/", "Orientación espiritual")
       ]
     },
     {
       id: "bloqueos", label: "Siento bloqueos o mala energía",
       intro: "Los bloqueos y la energía pesada los puedo limpiar. Recuperar tu equilibrio es el primer paso.",
       pages: [
-        P("/limpiezas-proteccion-y-destrabe/limpiezas-energeticas/", "Limpiezas energéticas"),
-        P("/limpiezas-proteccion-y-destrabe/proteccion-energetica/", "Protección energética"),
-        P("/limpiezas-proteccion-y-destrabe/apertura-de-caminos/", "Apertura de caminos")
+        P("/ClaraDeOteiza/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética"),
+        P("/ClaraDeOteiza/limpiezas-y-proteccion/apertura-de-caminos/", "Apertura de caminos")
       ]
     },
     {
       id: "dinero", label: "Problemas de dinero o trabajo",
       intro: "Cuando el dinero o el trabajo se traban, tengo trabajos de apertura y desbloqueo para volver a mover tu energía.",
       pages: [
-        P("/prosperidad-y-dinero/apertura-de-caminos/", "Apertura de caminos"),
-        P("/prosperidad-y-dinero/desbloqueo-de-caminos-laborales/", "Desbloqueo laboral"),
-        P("/prosperidad-y-dinero/problemas-de-dinero/", "Problemas de dinero")
+        P("/ClaraDeOteiza/prosperidad-y-abundancia/desbloqueo-laboral/", "Desbloqueo laboral y dinero"),
+        P("/ClaraDeOteiza/prosperidad-y-abundancia/prosperidad/", "Prosperidad y abundancia")
       ]
     }
   ];
@@ -104,54 +99,37 @@
   function G(href, label, cat, keys) { return { href: href, label: label, cat: cat, keys: keys }; }
   var PAGES = [
     // Infidelidad / me engaña / dudas
-    G("/tarot-y-videncia/videncia-natural/", "Videncia natural", "infiel", ["me engana", "me engaña", "engaña", "engana", "me engano", "infiel", "me es infiel", "es infiel", "infidelidad", "sospecho", "me miente", "miente", "mentira", "me oculta", "esconde", "saber la verdad", "quiero saber", "duda", "dudas", "otra mujer", "otro hombre"]),
-    G("/amor-y-parejas/alejamiento-de-terceros/", "Alejamiento de terceros", "infiel", ["me engana", "me engaña", "infiel", "amante", "la otra", "el otro", "tercero", "tercera", "sacar del medio"]),
-    // Amarres / amor que se alejó / recuperar
-    G("/amarres/amarres-de-amor/", "Amarres de amor", "amarres", ["amarre", "amarrar", "atar", "que vuelva", "que regrese", "amor"]),
-    G("/amor-y-parejas/retorno-de-pareja/", "Retorno de pareja", "amor", ["se alejo", "se alejó", "se fue", "me dejo", "me dejó", "volver", "vuelva", "regrese", "retorno", "que vuelva", "recuperar", "reconciliar", "separamos", "separó", "terminamos", "ex"]),
-    G("/amor-y-parejas/reconexion-afectiva/", "Reconexión afectiva", "amor", ["distante", "distancia", "frio", "frío", "fría", "no me habla", "se enfrio", "enfrió", "reconexion", "reconectar", "indiferente"]),
-    G("/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno", "amarres", ["para siempre", "eterno", "definitivo", "toda la vida"]),
-    G("/amor-y-parejas/union-de-pareja/", "Unión de pareja", "amor", ["unir", "union", "unión", "que estemos juntos", "formalizar", "compromiso"]),
-    G("/amor-y-parejas/reconciliacion-de-pareja/", "Reconciliación de pareja", "amor", ["reconciliar", "reconciliacion", "pelea", "peleamos", "discutimos", "arreglar"]),
-    G("/amor-y-parejas/endulzamientos/", "Endulzamientos", "amor", ["endulzar", "endulzamiento", "que me quiera mas", "carinoso", "cariñoso", "dulce", "amoroso"]),
-    G("/amor-y-parejas/armonizacion-de-vinculos/", "Armonización de vínculos", "amor", ["armonizar", "armonia", "armonía", "mejorar relacion", "mejorar la relacion", "fortalecer", "vinculo", "vínculo"]),
-    G("/amor-y-parejas/fortalecimiento-de-pareja/", "Fortalecimiento de pareja", "amor", ["fortalecer", "reforzar", "afianzar", "consolidar"]),
-    G("/amor-y-parejas/alejamiento-de-terceros/", "Alejamiento de terceros", "amor", ["tercero", "tercera", "amante", "otra persona", "otro", "otra", "alejar amante", "sacar del medio", "infiel", "cuernos", "engaño"]),
-    G("/amor-y-parejas/alejamiento-de-personas-toxicas/", "Alejamiento de personas tóxicas", "amor", ["toxica", "tóxica", "toxico", "tóxico", "alejar", "sacarme de encima"]),
-    G("/amarres/amarre-de-matrimonio/", "Amarre de matrimonio", "amarres", ["matrimonio", "casarnos", "casar", "esposo", "esposa", "marido", "casados"]),
-    G("/amor-y-parejas/problemas-de-amor/", "Problemas de amor", "amor", ["problema de amor", "problemas de amor", "mal en el amor", "sufro por amor", "corazon roto", "corazón roto"]),
-
+    G("/ClaraDeOteiza/tarot-y-videncia/videncia/", "Videncia: saber la verdad", "infiel", ["me engana", "me engaña", "engaña", "engana", "me engano", "infiel", "me es infiel", "es infiel", "infidelidad", "sospecho", "me miente", "miente", "mentira", "me oculta", "esconde", "saber la verdad", "quiero saber", "duda", "dudas", "otra mujer", "otro hombre"]),
+    G("/ClaraDeOteiza/amarres/alejamiento-de-terceros-y-amantes/", "Alejamiento de terceros y amantes", "infiel", ["amante", "la otra", "el otro", "tercero", "tercera", "sacar del medio", "cuernos", "engaño"]),
+    // Amor / amarres
+    G("/ClaraDeOteiza/amarres/amarres-de-amor/", "Amarres de amor", "amarres", ["amarre", "amarrar", "atar", "que vuelva", "que regrese", "amor"]),
+    G("/ClaraDeOteiza/amarres/retorno-de-pareja/", "Retorno de pareja", "amor", ["se alejo", "se alejó", "se fue", "me dejo", "me dejó", "volver", "vuelva", "regrese", "retorno", "recuperar", "separamos", "separó", "terminamos", "ex"]),
+    G("/ClaraDeOteiza/amarres/reconciliacion-de-pareja/", "Reconciliación de pareja", "amor", ["reconciliar", "reconciliacion", "reconciliación", "pelea", "peleamos", "distante", "no me habla", "reconectar", "volver a estar bien", "amigarnos", "amigarse"]),
+    G("/ClaraDeOteiza/amarres/endulzamiento/", "Endulzamiento", "amor", ["endulzar", "endulzamiento", "que me quiera mas", "carinoso", "cariñoso", "dulce", "amoroso", "frio", "frío", "fría", "se enfrio", "enfrió", "indiferente"]),
+    G("/ClaraDeOteiza/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno", "amor", ["armonizar", "armonia", "armonía", "mejorar relacion", "mejorar la relacion", "fortalecer", "reforzar", "afianzar", "consolidar", "vinculo", "vínculo", "amor eterno", "para siempre", "duradero"]),
+    G("/ClaraDeOteiza/amarres/union-y-matrimonio/", "Unión y matrimonio", "amor", ["unir", "union", "unión", "que estemos juntos", "formalizar", "compromiso", "matrimonio", "casarnos", "casar", "esposo", "esposa", "marido", "casados", "convivir"]),
+    G("/ClaraDeOteiza/amarres/amarre-pasional/", "Amarre pasional", "amor", ["pasion", "pasión", "pasional", "deseo", "sexual", "atraccion", "atracción", "quimica", "química", "intimidad"]),
+    G("/ClaraDeOteiza/amarres/amarres-de-amor/", "Problemas de amor", "amor", ["problema de amor", "problemas de amor", "mal en el amor", "sufro por amor", "corazon roto", "corazón roto"]),
     // Tarot / videncia / futuro
-    G("/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot", "tarot", ["tarot", "carta", "cartas", "tirada", "tirar las cartas"]),
-    G("/tarot-y-videncia/tarot-del-amor/", "Tarot del amor", "tarot", ["tarot del amor", "cartas del amor"]),
-    G("/tarot-y-videncia/videncia-natural/", "Videncia natural", "tarot", ["videncia", "vidente", "vision", "visión", "medium", "médium"]),
-    G("/tarot-y-videncia/orientacion-espiritual/", "Orientación espiritual", "tarot", ["orientacion", "orientación", "guia", "guía", "no se que hacer", "no sé qué hacer", "consejo", "que camino", "decision", "decisión", "futuro", "que va a pasar", "saber", "adivinar", "claridad"]),
-
-    // Limpiezas / protección / daño
-    G("/limpiezas-proteccion-y-destrabe/corte-de-danos/", "Corte de daños", "limpiezas", ["me hicieron", "hicieron un trabajo", "trabajo en contra", "dano", "daño", "brujeria", "brujería", "embrujado", "hechizo en contra", "corte de danos"]),
-    G("/limpiezas-proteccion-y-destrabe/desamarres/", "Desamarres", "limpiezas", ["desamarre", "romper amarre", "quitar amarre", "deshacer amarre", "amarrado"]),
-    G("/limpiezas-proteccion-y-destrabe/limpiezas-energeticas/", "Limpiezas energéticas", "limpiezas", ["limpieza", "limpiar", "energia pesada", "energía pesada", "mala energia", "mala energía", "cargado", "pesado"]),
-    G("/limpiezas-proteccion-y-destrabe/proteccion-energetica/", "Protección energética", "limpiezas", ["proteccion", "protección", "proteger", "protegerme", "escudo", "amuleto proteccion"]),
-    G("/limpiezas-proteccion-y-destrabe/proteccion-familiar/", "Protección familiar", "limpiezas", ["familia", "proteger a mi familia", "mis hijos", "hijos", "casa"]),
-    G("/limpiezas-proteccion-y-destrabe/apertura-de-caminos/", "Apertura de caminos", "limpiezas", ["bloqueo", "bloqueada", "bloqueado", "trabada", "trabado", "nada me sale", "estancada", "estancado", "abrir caminos", "apertura"]),
-    G("/limpiezas-proteccion-y-destrabe/contra-hechizos/", "Contra hechizos", "limpiezas", ["contra hechizo", "me hicieron un hechizo", "hechizada", "hechizado"]),
-    G("/limpiezas-proteccion-y-destrabe/limpieza-de-casas/", "Limpieza de casas", "limpiezas", ["casa", "hogar", "vivienda", "limpiar la casa"]),
-    G("/limpiezas-proteccion-y-destrabe/limpieza-de-negocios/", "Limpieza de negocios", "limpiezas", ["negocio", "local", "comercio", "empresa"]),
-
-    // Envidia / mal de ojo
-    G("/limpiezas-proteccion-y-destrabe/limpiezas-energeticas/", "Limpiezas energéticas", "limpiezas", ["envidia", "mal de ojo", "ojeado", "me tienen envidia", "me hacen mal"]),
-
+    G("/ClaraDeOteiza/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot", "tarot", ["tarot", "carta", "cartas", "tirada", "tirar las cartas"]),
+    G("/ClaraDeOteiza/tarot-y-videncia/tarot-del-amor/", "Tarot del amor", "tarot", ["tarot del amor", "cartas del amor", "tarot de pareja", "me quiere", "que siente por mi", "qué siente"]),
+    G("/ClaraDeOteiza/tarot-y-videncia/videncia/", "Videncia natural", "tarot", ["videncia", "vidente", "vision", "visión", "medium", "médium", "percibir"]),
+    G("/ClaraDeOteiza/tarot-y-videncia/orientacion-espiritual/", "Orientación espiritual", "tarot", ["orientacion", "orientación", "guia", "guía", "no se que hacer", "no sé qué hacer", "consejo", "que camino", "decision", "decisión", "futuro", "que va a pasar", "saber", "adivinar", "claridad", "perdida", "perdido"]),
+    // Rituales / anti-brujería / desamarres
+    G("/ClaraDeOteiza/rituales-y-trabajos/te-hicieron-un-trabajo/", "¿Te hicieron un trabajo?", "rituales", ["me hicieron", "hicieron un trabajo", "trabajo en contra", "me hicieron mal", "embrujado", "todo se complico", "todo me sale mal"]),
+    G("/ClaraDeOteiza/rituales-y-trabajos/corte-de-danos/", "Anti-brujería y corte de daños", "rituales", ["dano", "daño", "danos", "daños", "brujeria", "brujería", "corte de danos", "corte de daños", "anti brujeria", "antibrujeria", "sacar el daño", "cortar el daño"]),
+    G("/ClaraDeOteiza/rituales-y-trabajos/contra-hechizos/", "Contra hechizos", "rituales", ["contra hechizo", "me hicieron un hechizo", "hechizada", "hechizado", "hechizo", "maleficio", "hechizo en contra"]),
+    G("/ClaraDeOteiza/rituales-y-trabajos/desamarres/", "Desamarres", "rituales", ["desamarre", "desamarrar", "romper amarre", "quitar amarre", "deshacer amarre", "sacar un amarre", "sacarme un amarre", "sacar el amarre", "amarrado", "atadura", "liberarme", "soltar"]),
+    G("/ClaraDeOteiza/rituales-y-trabajos/rituales/", "Rituales a medida", "rituales", ["ritual", "trabajo espiritual", "trabajo a medida", "no se que necesito", "algo a medida"]),
+    // Limpiezas / protección
+    G("/ClaraDeOteiza/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética", "limpiezas", ["limpieza", "limpiar", "energia pesada", "energía pesada", "mala energia", "mala energía", "cargado", "pesado", "envidia", "mal de ojo", "ojeado", "me tienen envidia"]),
+    G("/ClaraDeOteiza/limpiezas-y-proteccion/proteccion/", "Protección", "limpiezas", ["proteccion", "protección", "proteger", "protegerme", "escudo", "familia", "mis hijos", "hijos", "mi casa", "la casa", "hogar", "me quieren mal", "envidian"]),
+    G("/ClaraDeOteiza/limpiezas-y-proteccion/apertura-de-caminos/", "Apertura de caminos", "limpiezas", ["bloqueo", "bloqueada", "bloqueado", "trabada", "trabado", "nada me sale", "estancada", "estancado", "abrir caminos", "apertura"]),
+    G("/ClaraDeOteiza/limpiezas-y-proteccion/armonizacion/", "Armonización personal", "limpiezas", ["equilibrio", "paz interior", "ansiedad", "estres", "estrés", "stress", "angustia", "triste", "tristeza", "deprimida", "deprimido", "bajon", "bajón", "mal animo", "ánimo", "armonizacion", "armonización"]),
     // Prosperidad / dinero / trabajo
-    G("/prosperidad-y-dinero/problemas-de-dinero/", "Problemas de dinero", "prosperidad", ["dinero", "plata", "deuda", "deudas", "no me alcanza", "sin plata", "problemas de dinero"]),
-    G("/prosperidad-y-dinero/desbloqueo-de-caminos-laborales/", "Desbloqueo laboral", "prosperidad", ["trabajo", "laburo", "empleo", "sin trabajo", "conseguir trabajo", "desempleo", "me quede sin trabajo", "problemas laborales", "jefe"]),
-    G("/prosperidad-y-dinero/apertura-de-caminos/", "Apertura de caminos", "prosperidad", ["prosperidad", "abundancia", "que me vaya bien", "progresar", "crecer", "oportunidades", "abrir caminos"]),
-    G("/prosperidad-y-dinero/suerte-en-el-juego/", "Suerte en el juego", "prosperidad", ["suerte", "juego", "loteria", "lotería", "quiniela", "apuestas"]),
-    G("/prosperidad-y-dinero/limpieza-energetica-para-negocios/", "Limpieza para negocios", "prosperidad", ["negocio no funciona", "local vacio", "vacío", "no viene gente", "ventas"]),
-
-    // Rituales / trabajos / bienestar emocional
-    G("/rituales/rituales-de-amor/", "Rituales de amor", "rituales", ["ritual de amor", "ritual", "hechizo de amor"]),
-    G("/rituales/rituales-de-proteccion/", "Rituales de protección", "rituales", ["ritual de proteccion", "ritual de protección"]),
-    G("/trabajos-esotericos/depresion/", "Acompañamiento en la angustia", "rituales", ["triste", "tristeza", "deprimida", "deprimido", "depresion", "depresión", "angustia", "sin fuerzas", "mal animo", "ánimo", "bajon", "bajón"])
+    G("/ClaraDeOteiza/prosperidad-y-abundancia/prosperidad/", "Prosperidad y abundancia", "prosperidad", ["prosperidad", "abundancia", "que me vaya bien", "progresar", "crecer", "oportunidades", "dinero", "plata", "deuda", "deudas", "no me alcanza", "sin plata", "problemas de dinero"]),
+    G("/ClaraDeOteiza/prosperidad-y-abundancia/desbloqueo-laboral/", "Desbloqueo laboral y dinero", "prosperidad", ["trabajo", "laburo", "empleo", "sin trabajo", "conseguir trabajo", "desempleo", "problemas laborales", "jefe", "negocio", "local", "comercio", "ventas", "desbloqueo"]),
+    G("/ClaraDeOteiza/prosperidad-y-abundancia/suerte-en-el-juego/", "Suerte en el juego", "prosperidad", ["suerte", "juego", "loteria", "lotería", "quiniela", "apuestas", "casino"])
   ];
 
   function normalize(s) {
@@ -190,22 +168,22 @@
   var SERVICES = [
     { id: "amarres", title: "Amarres de Amor", image: "assets/services/amarres-de-amor.webp",
       desc: "Rituales personalizados para fortalecer, recuperar y proteger vínculos afectivos. Cada caso se evalúa individualmente.",
-      href: "/amarres/", waMsg: "Hola Clara, quiero una consulta sobre amarres de amor." },
+      href: "/ClaraDeOteiza/amarres/", waMsg: "Hola Clara, quiero una consulta sobre amarres de amor." },
     { id: "amor", title: "Amor y Parejas", image: "assets/services/amor-y-parejas.webp",
       desc: "Retorno de pareja, endulzamientos, reconexión afectiva y armonización de vínculos. Trabajo integral sobre la relación.",
-      href: "/amor-y-parejas/", waMsg: "Hola Clara, quiero una consulta sobre amor y parejas." },
+      href: "/ClaraDeOteiza/amarres/", waMsg: "Hola Clara, quiero una consulta sobre amor y parejas." },
     { id: "tarot", title: "Tarot y Videncia", image: "assets/services/tarot-y-videncia.webp",
       desc: "Lecturas personalizadas para comprender tu situación, tomar decisiones y encontrar claridad en momentos difíciles.",
-      href: "/tarot-y-videncia/", waMsg: "Hola Clara, quiero una consulta de tarot y videncia." },
+      href: "/ClaraDeOteiza/tarot-y-videncia/", waMsg: "Hola Clara, quiero una consulta de tarot y videncia." },
     { id: "limpiezas", title: "Limpiezas y Protección", image: "assets/services/limpiezas-y-proteccion.jpg",
       desc: "Limpieza energética, corte de daños, desamarres y protección espiritual. Restablecé tu equilibrio.",
-      href: "/limpiezas-proteccion-y-destrabe/", waMsg: "Hola Clara, quiero una consulta sobre limpiezas y protección." },
+      href: "/ClaraDeOteiza/limpiezas-y-proteccion/", waMsg: "Hola Clara, quiero una consulta sobre limpiezas y protección." },
     { id: "prosperidad", title: "Prosperidad y Dinero", image: "assets/services/prosperidad-y-dinero.webp",
       desc: "Apertura de caminos, desbloqueo laboral y trabajo energético para negocios. Removemos lo que traba tu crecimiento.",
-      href: "/prosperidad-y-dinero/", waMsg: "Hola Clara, quiero una consulta sobre prosperidad y dinero." },
+      href: "/ClaraDeOteiza/prosperidad-y-abundancia/", waMsg: "Hola Clara, quiero una consulta sobre prosperidad y dinero." },
     { id: "rituales", title: "Rituales y Trabajos", image: "assets/services/rituales-y-trabajos.webp",
       desc: "Trabajos energéticos a medida según cada caso. Clara evalúa tu situación antes de recomendar cualquier ritual.",
-      href: "/rituales/", waMsg: "Hola Clara, quiero una consulta sobre rituales y trabajos." }
+      href: "/ClaraDeOteiza/rituales-y-trabajos/", waMsg: "Hola Clara, quiero una consulta sobre rituales y trabajos." }
   ];
 
   // 20 testimonial screenshots
