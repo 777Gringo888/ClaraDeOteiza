@@ -1196,3 +1196,9 @@ body { background: var(--bg-base); overflow-x: hidden; }
 .cdo-consent__minor { display: inline-block; margin-top: var(--space-4); background: none; border: 0; color: var(--text-faint); font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
 .cdo-consent__legal { margin: var(--space-4) 0 0; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 .cdo-consent__legal a { color: var(--gold-300); }
+
+/* Derivador: título con presencia de hero (mismo peso que "Clara de Oteiza", más grande) */
+.cdo-derivador .sec-head__title { font-size: var(--fs-h1); }
+/* chips del derivador: tinte violeta (unificado, sin marrón) */
+.chip { background: rgba(110, 52, 206, 0.12); border-color: rgba(138, 84, 224, 0.4); }
+.chip:hover { background: rgba(110, 52, 206, 0.24); border-color: var(--red-400); }
