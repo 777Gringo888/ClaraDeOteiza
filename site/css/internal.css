@@ -74,33 +74,38 @@
   align-items: center;
 }
 @media (min-width: 940px) {
-  .cdo-hero-servicio { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-8); }
+  .cdo-hero-servicio { grid-template-columns: minmax(0, 1fr) 340px; gap: var(--space-8); }
 }
 .cdo-hero-servicio__main { min-width: 0; }
 
-/* Tarjeta de testimonio en el hero (prueba social arriba).
-   En mobile va debajo del botón (el CTA sigue arriba); en desktop, a la derecha. */
-.cdo-hero-proof { display: block; width: 100%; max-width: 360px; margin-inline: auto; }
+/* Foto de Clara en el hero (llena el costado, en vez del chat de WhatsApp).
+   En mobile va debajo del botón; en desktop, a la derecha. */
+.cdo-hero-figure { display: block; width: 100%; max-width: 340px; margin: 0 auto; }
 @media (min-width: 940px) {
-  .cdo-hero-proof { justify-self: end; width: 300px; max-width: none; margin: 0; }
+  .cdo-hero-figure { justify-self: end; width: 340px; max-width: none; margin: 0; }
 }
-.cdo-hero-proof__card {
-  background: linear-gradient(180deg, rgba(43,21,18,0.82), rgba(10,7,20,0.82));
-  border: 1px solid var(--border-gold);
+.cdo-hero-figure__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
-  padding: var(--space-4);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
   box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(4px);
 }
-.cdo-hero-proof__head { display: flex; flex-direction: column; gap: 2px; margin-bottom: var(--space-3); }
-.cdo-hero-proof__stars { color: var(--gold-400); letter-spacing: 2px; font-size: 0.95rem; }
-.cdo-hero-proof__label { color: var(--text-muted); font-size: 0.8rem; }
-.cdo-hero-proof__card img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-sm);
+.cdo-hero-figure__frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 16%; display: block; }
+.cdo-hero-figure__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: var(--space-6) var(--space-4) var(--space-4);
+  background: linear-gradient(180deg, rgba(6,4,14,0) 0%, rgba(6,4,14,0.85) 100%);
+}
+.cdo-hero-figure__cap strong {
   display: block;
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  font-size: 1.15rem;
+  line-height: 1.1;
 }
+.cdo-hero-figure__cap span { color: var(--text-gold); font-size: 0.85rem; }
 .cdo-hero-servicio .badge { margin-bottom: var(--space-4); }
 .cdo-hero-servicio h1 {
   font-family: var(--font-display);
