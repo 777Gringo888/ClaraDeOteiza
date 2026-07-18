@@ -121,14 +121,14 @@
 /* Subtítulo = lo que cura el dolor */
 .cdo-hero-servicio__sub {
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 3.6vw, 1.85rem);
-  line-height: 1.3;
-  font-weight: 500;
-  color: var(--text-body);
+  font-size: clamp(1.45rem, 4vw, 2.05rem);
+  line-height: 1.25;
+  font-weight: var(--fw-bold); /* propuesta de valor destacada: resuelve el dolor */
+  color: var(--text-heading);
   margin: 0 0 var(--space-5);
-  max-width: 34rem;
+  max-width: 36rem;
 }
-.cdo-hero-servicio__sub .gold-accent { color: var(--gold-300); }
+.cdo-hero-servicio__sub .gold-accent { color: var(--gold-300); font-weight: var(--fw-extra); }
 .cdo-hero-servicio__lead {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -144,7 +144,7 @@
 }
 
 /* ---- Cuerpo de contenido (prosa SEO) ---- */
-.cdo-content { padding: var(--section-y) 0; }
+.cdo-content { padding: clamp(3rem, 6.5vw, 5rem) 0; }
 .cdo-content__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -262,29 +262,35 @@
 .cdo-feature__body .cdo-signals { margin-bottom: 0; }
 .cdo-features__cta { text-align: center; margin-top: var(--space-4); }
 
-/* ---- Lista de señales (cuándo te puede ayudar) ---- */
-.cdo-signals { list-style: none; margin: var(--space-4) 0 var(--space-6); padding: 0; display: grid; gap: var(--space-3); }
+/* ---- Señales (cuándo te puede ayudar): grilla de tarjetas con ícono ---- */
+.cdo-signals { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+@media (min-width: 720px) { .cdo-signals { grid-template-columns: 1fr 1fr; } }
 .cdo-signals li {
-  position: relative;
-  padding: var(--space-5) var(--space-6) var(--space-5) calc(var(--space-7) + 6px);
-  background: linear-gradient(180deg, rgba(43,21,18,0.55), rgba(19,10,8,0.55));
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: rgba(255, 255, 255, 0.035);
   border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   color: var(--text-body);
-  font-size: 1.15rem;
-  line-height: 1.5;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
 }
-.cdo-signals li::before {
-  content: "";
-  position: absolute;
-  left: var(--space-5);
-  top: 50%;
-  width: 22px; height: 22px;
-  margin-top: -11px;
+.cdo-signals li:hover { border-color: var(--border-gold); background: rgba(241, 216, 150, 0.05); }
+.cdo-signals__ico {
+  flex: 0 0 auto;
+  width: 46px; height: 46px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 42%, var(--gold-300), var(--gold-600));
-  box-shadow: 0 0 12px rgba(207,162,74,0.5);
+  display: grid;
+  place-items: center;
+  color: var(--gold-300);
+  background: radial-gradient(circle at 50% 32%, rgba(241, 216, 150, 0.22), rgba(207, 162, 74, 0.06));
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 0 14px rgba(207, 162, 74, 0.18);
 }
+.cdo-signals__ico svg { width: 22px; height: 22px; }
 
 /* ---- Aside (magia blanca + CTA lateral) ---- */
 .cdo-aside { display: grid; gap: var(--space-5); align-content: start; }
@@ -347,7 +353,7 @@
 .cdo-card:hover .cdo-card__more span[aria-hidden] { transform: translateX(4px); }
 
 /* ---- Presentación de Clara (autoridad + confianza) ---- */
-.cdo-author { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-author { padding: clamp(3rem, 6.5vw, 5rem) 0; border-top: 1px solid var(--border-hairline); }
 .cdo-author__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -392,7 +398,7 @@
 .cdo-author__body p:last-child { margin-bottom: 0; }
 
 /* ---- Páginas relacionadas (enlazado interno para SEO) ---- */
-.cdo-related { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-related { padding: clamp(3rem, 6.5vw, 5rem) 0; border-top: 1px solid var(--border-hairline); }
 .cdo-related__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -433,16 +439,17 @@
 .cdo-benefit strong { color: var(--text-heading); font-weight: 600; font-size: 0.98rem; margin-bottom: 1px; }
 
 /* ---- Preguntas frecuentes (FAQ) ---- */
-.cdo-faq { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-faq { padding: clamp(3rem, 6.5vw, 5rem) 0; border-top: 1px solid var(--border-hairline); }
 /* FAQ centrado: encabezado y lista alineados al centro de la página */
 .cdo-faq .sec-head { text-align: center; align-items: center; }
 .cdo-faq__list { max-width: 60rem; margin: var(--space-6) auto 0; display: grid; gap: var(--space-3); text-align: left; }
 .cdo-faq__item {
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-md);
-  background: linear-gradient(180deg, rgba(43,21,18,0.5), rgba(19,10,8,0.5));
+  background: rgba(255, 255, 255, 0.03);
   overflow: hidden;
 }
+.cdo-faq__item[open] { border-color: var(--border-gold); background: rgba(241, 216, 150, 0.04); }
 .cdo-faq__item summary {
   cursor: pointer;
   list-style: none;
@@ -462,8 +469,9 @@
 .cdo-faq__item[open] summary::after { content: "\2212"; }
 .cdo-faq__item p {
   margin: 0;
-  padding: 0 var(--space-5) var(--space-5);
-  color: var(--text-body);
+  padding: 0 var(--space-6) var(--space-5);
+  color: var(--text-muted); /* respuesta en otro color, se diferencia de la pregunta */
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
@@ -527,3 +535,36 @@
 
 /* Bloque "Cómo trabajo / Qué esperar" va pegado a "Quién soy" como un solo relato */
 .cdo-content--secondary { padding-top: 0; }
+
+/* ============================================================
+   Descripción del servicio: título con eyebrow + imagen/texto a 2 col
+   (ancho completo, alineado al resto de los componentes)
+   ============================================================ */
+.sec-head__title .gold-accent { color: var(--text-gold); }
+/* separación entre la subsección "¿Qué es?" y "¿Cuándo puede ayudarte?" */
+.cdo-content__sub { margin-top: clamp(2.5rem, 6vw, 4rem); }
+
+.cdo-servicedesc { display: grid; gap: var(--space-6); margin-top: var(--space-6); }
+@media (min-width: 860px) {
+  .cdo-servicedesc { grid-template-columns: 360px minmax(0, 1fr); gap: var(--space-8); align-items: start; }
+}
+.cdo-servicedesc__media { margin: 0; }
+.cdo-servicedesc__media img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-md);
+}
+@media (min-width: 860px) { .cdo-servicedesc__media img { aspect-ratio: 1 / 1; } }
+.cdo-servicedesc__media figcaption {
+  margin-top: var(--space-3);
+  font-size: 0.9rem; color: var(--text-muted); line-height: 1.4;
+}
+.cdo-servicedesc__text p {
+  color: var(--text-body);
+  font-size: 1.15rem; line-height: 1.75;
+  margin: 0 0 var(--space-5);
+}
+.cdo-servicedesc__text p:last-child { margin-bottom: 0; }
