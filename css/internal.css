@@ -111,6 +111,7 @@
   font-family: var(--font-display);
   /* nombre del ritual bien grande (títulos cortos); los largos escalan por vw */
   font-size: clamp(2.6rem, 8vw, 4.4rem);
+  font-weight: var(--fw-bold); /* 700, no 800: más elegante y menos pesado */
   line-height: 1.02;
   letter-spacing: -0.01em;
   color: var(--text-heading);
@@ -159,6 +160,7 @@
 .cdo-prose h2 {
   font-family: var(--font-display);
   font-size: var(--fs-h3);
+  font-weight: var(--fw-bold); /* 700, no 800: subtítulos del contenido más livianos */
   color: var(--text-heading);
   margin: var(--space-8) 0 var(--space-4);
   line-height: 1.15;
@@ -509,3 +511,6 @@
 }
 .cdo-legal__toc h2 { margin: 0 0 var(--space-3) !important; font-size: 1.05rem !important; }
 .cdo-legal__toc ul { margin: 0; }
+
+/* Bloque "Cómo trabajo / Qué esperar" va pegado a "Quién soy" como un solo relato */
+.cdo-content--secondary { padding-top: 0; }
