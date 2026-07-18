@@ -556,18 +556,26 @@ body { background: var(--bg-base); overflow-x: hidden; }
 }
 .cdo-derivador__submit:hover { filter: brightness(1.05); }
 
-/* nota de cupo semanal en el derivador */
+/* bloque de reserva del derivador: explica (Clara en persona · cupos limitados) + botón */
+.cdo-derivador__reserva {
+  margin-top: 2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
 .cdo-derivador__cupo {
-  margin: 1.4rem auto 0;
-  max-width: 44ch;
+  margin: 0;
+  max-width: 46ch;
   text-align: center;
-  font-size: 0.98rem;
+  font-size: 1.02rem;
   line-height: 1.55;
-  color: var(--text-muted);
+  color: var(--text-body);
 }
 .cdo-derivador__cupo .flame { margin-right: 0.15rem; }
 .cdo-derivador__cupo strong { color: var(--gold-300); font-weight: 700; }
-.cdo-derivador__cupo em { color: var(--text-heading); font-style: normal; font-weight: 600; }
 
 .cdo-result-wrap {
   margin-top: 1.8rem;
