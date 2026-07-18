@@ -14,8 +14,9 @@
       id: "alejo", label: "Mi pareja se alejó",
       intro: "Cuando alguien que amás se aleja, la incertidumbre pesa. Puedo ayudarte a trabajar el vínculo para reabrir el diálogo y el acercamiento.",
       pages: [
+        P("/amarres/retorno-de-pareja/", "Retorno de pareja"),
         P("/amarres/amarres-de-amor/", "Amarres de amor"),
-        P("/amarres/", "Retorno y reconexión de pareja")
+        P("/amarres/", "Ver todos los trabajos de amor")
       ]
     },
     {
@@ -23,52 +24,57 @@
       intro: "Recuperar un vínculo empieza por entender qué se rompió. Evalúo tu caso antes de recomendarte cualquier trabajo.",
       pages: [
         P("/amarres/amarres-de-amor/", "Amarres de amor"),
-        P("/amarres/", "Retorno y unión de pareja")
+        P("/amarres/reconciliacion-de-pareja/", "Reconciliación de pareja"),
+        P("/amarres/", "Ver todos los trabajos de amor")
       ]
     },
     {
       id: "infiel", label: "Creo que me engaña",
       intro: "Cuando algo no cierra, primero conviene ver con claridad qué está pasando. Te hago una lectura y, si hay un tercero, trabajo el alejamiento y la reconexión de tu vínculo.",
       pages: [
-        P("/tarot-y-videncia/", "Videncia: saber la verdad"),
-        P("/amarres/", "Alejamiento de terceros y amantes")
+        P("/tarot-y-videncia/videncia/", "Videncia: saber la verdad"),
+        P("/amarres/alejamiento-de-terceros-y-amantes/", "Alejamiento de terceros y amantes")
       ]
     },
     {
       id: "fortalecer", label: "Quiero fortalecer mi relación",
       intro: "Una relación se cuida. Puedo acompañarte con trabajos de armonía y acercamiento para reforzar el vínculo que ya tenés.",
       pages: [
-        P("/amarres/", "Endulzamiento y armonización de vínculos")
+        P("/amarres/endulzamiento/", "Endulzamiento"),
+        P("/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno")
       ]
     },
     {
       id: "trabajo", label: "Creo que me hicieron un trabajo",
       intro: "Si sentís que algo externo te está afectando, lo evalúo y, si corresponde, corto y limpio esa energía.",
       pages: [
-        P("/rituales-y-trabajos/", "¿Te hicieron un trabajo?"),
-        P("/limpiezas-y-proteccion/", "Limpieza energética")
+        P("/rituales-y-trabajos/te-hicieron-un-trabajo/", "¿Te hicieron un trabajo?"),
+        P("/rituales-y-trabajos/corte-de-danos/", "Anti-brujería y corte de daños"),
+        P("/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética")
       ]
     },
     {
       id: "claridad", label: "Necesito claridad sobre mi futuro",
       intro: "Cuando no sabés qué camino tomar, te hago una lectura para ver con más claridad y decidir con calma.",
       pages: [
-        P("/tarot-y-videncia/", "Lectura de tarot y videncia")
+        P("/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot"),
+        P("/tarot-y-videncia/orientacion-espiritual/", "Orientación espiritual")
       ]
     },
     {
       id: "bloqueos", label: "Siento bloqueos o mala energía",
       intro: "Los bloqueos y la energía pesada los puedo limpiar. Recuperar tu equilibrio es el primer paso.",
       pages: [
-        P("/limpiezas-y-proteccion/", "Limpieza y apertura de caminos"),
-        P("/rituales-y-trabajos/", "¿Te hicieron un trabajo?")
+        P("/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética"),
+        P("/limpiezas-y-proteccion/apertura-de-caminos/", "Apertura de caminos")
       ]
     },
     {
       id: "dinero", label: "Problemas de dinero o trabajo",
       intro: "Cuando el dinero o el trabajo se traban, tengo trabajos de apertura y desbloqueo para volver a mover tu energía.",
       pages: [
-        P("/prosperidad-y-abundancia/", "Prosperidad, dinero y trabajo")
+        P("/prosperidad-y-abundancia/desbloqueo-laboral/", "Desbloqueo laboral y dinero"),
+        P("/prosperidad-y-abundancia/prosperidad/", "Prosperidad y abundancia")
       ]
     }
   ];
@@ -93,35 +99,37 @@
   function G(href, label, cat, keys) { return { href: href, label: label, cat: cat, keys: keys }; }
   var PAGES = [
     // Infidelidad / me engaña / dudas
-    G("/tarot-y-videncia/", "Videncia: saber la verdad", "infiel", ["me engana", "me engaña", "engaña", "engana", "me engano", "infiel", "me es infiel", "es infiel", "infidelidad", "sospecho", "me miente", "miente", "mentira", "me oculta", "esconde", "saber la verdad", "quiero saber", "duda", "dudas", "otra mujer", "otro hombre"]),
-    G("/amarres/", "Alejamiento de terceros y amantes", "infiel", ["amante", "la otra", "el otro", "tercero", "tercera", "sacar del medio", "cuernos", "engaño"]),
+    G("/tarot-y-videncia/videncia/", "Videncia: saber la verdad", "infiel", ["me engana", "me engaña", "engaña", "engana", "me engano", "infiel", "me es infiel", "es infiel", "infidelidad", "sospecho", "me miente", "miente", "mentira", "me oculta", "esconde", "saber la verdad", "quiero saber", "duda", "dudas", "otra mujer", "otro hombre"]),
+    G("/amarres/alejamiento-de-terceros-y-amantes/", "Alejamiento de terceros y amantes", "infiel", ["amante", "la otra", "el otro", "tercero", "tercera", "sacar del medio", "cuernos", "engaño"]),
     // Amor / amarres
     G("/amarres/amarres-de-amor/", "Amarres de amor", "amarres", ["amarre", "amarrar", "atar", "que vuelva", "que regrese", "amor"]),
-    G("/amarres/", "Retorno de pareja", "amor", ["se alejo", "se alejó", "se fue", "me dejo", "me dejó", "volver", "vuelva", "regrese", "retorno", "recuperar", "reconciliar", "reconciliacion", "separamos", "separó", "terminamos", "ex", "pelea", "peleamos"]),
-    G("/amarres/", "Reconexión afectiva", "amor", ["distante", "distancia", "frio", "frío", "fría", "no me habla", "se enfrio", "enfrió", "reconexion", "reconectar", "indiferente"]),
-    G("/amarres/", "Endulzamiento", "amor", ["endulzar", "endulzamiento", "que me quiera mas", "carinoso", "cariñoso", "dulce", "amoroso"]),
-    G("/amarres/", "Armonización y fortalecimiento", "amor", ["armonizar", "armonia", "armonía", "mejorar relacion", "mejorar la relacion", "fortalecer", "reforzar", "afianzar", "consolidar", "vinculo", "vínculo"]),
-    G("/amarres/", "Unión y matrimonio", "amor", ["unir", "union", "unión", "que estemos juntos", "formalizar", "compromiso", "matrimonio", "casarnos", "casar", "esposo", "esposa", "marido", "casados"]),
-    G("/amarres/", "Amarre pasional", "amor", ["pasion", "pasión", "pasional", "deseo", "sexual", "atraccion", "atracción", "quimica", "química"]),
-    G("/amarres/", "Problemas de amor", "amor", ["problema de amor", "problemas de amor", "mal en el amor", "sufro por amor", "corazon roto", "corazón roto"]),
+    G("/amarres/retorno-de-pareja/", "Retorno de pareja", "amor", ["se alejo", "se alejó", "se fue", "me dejo", "me dejó", "volver", "vuelva", "regrese", "retorno", "recuperar", "separamos", "separó", "terminamos", "ex"]),
+    G("/amarres/reconciliacion-de-pareja/", "Reconciliación de pareja", "amor", ["reconciliar", "reconciliacion", "reconciliación", "pelea", "peleamos", "distante", "no me habla", "reconectar", "volver a estar bien", "amigarnos", "amigarse"]),
+    G("/amarres/endulzamiento/", "Endulzamiento", "amor", ["endulzar", "endulzamiento", "que me quiera mas", "carinoso", "cariñoso", "dulce", "amoroso", "frio", "frío", "fría", "se enfrio", "enfrió", "indiferente"]),
+    G("/amarres/amarres-de-amor-eterno/", "Amarres de amor eterno", "amor", ["armonizar", "armonia", "armonía", "mejorar relacion", "mejorar la relacion", "fortalecer", "reforzar", "afianzar", "consolidar", "vinculo", "vínculo", "amor eterno", "para siempre", "duradero"]),
+    G("/amarres/union-y-matrimonio/", "Unión y matrimonio", "amor", ["unir", "union", "unión", "que estemos juntos", "formalizar", "compromiso", "matrimonio", "casarnos", "casar", "esposo", "esposa", "marido", "casados", "convivir"]),
+    G("/amarres/amarre-pasional/", "Amarre pasional", "amor", ["pasion", "pasión", "pasional", "deseo", "sexual", "atraccion", "atracción", "quimica", "química", "intimidad"]),
+    G("/amarres/amarres-de-amor/", "Problemas de amor", "amor", ["problema de amor", "problemas de amor", "mal en el amor", "sufro por amor", "corazon roto", "corazón roto"]),
     // Tarot / videncia / futuro
-    G("/tarot-y-videncia/", "Lectura de tarot", "tarot", ["tarot", "carta", "cartas", "tirada", "tirar las cartas", "tarot del amor"]),
-    G("/tarot-y-videncia/", "Videncia natural", "tarot", ["videncia", "vidente", "vision", "visión", "medium", "médium"]),
-    G("/tarot-y-videncia/", "Orientación espiritual", "tarot", ["orientacion", "orientación", "guia", "guía", "no se que hacer", "no sé qué hacer", "consejo", "que camino", "decision", "decisión", "futuro", "que va a pasar", "saber", "adivinar", "claridad"]),
+    G("/tarot-y-videncia/lectura-de-tarot/", "Lectura de tarot", "tarot", ["tarot", "carta", "cartas", "tirada", "tirar las cartas"]),
+    G("/tarot-y-videncia/tarot-del-amor/", "Tarot del amor", "tarot", ["tarot del amor", "cartas del amor", "tarot de pareja", "me quiere", "que siente por mi", "qué siente"]),
+    G("/tarot-y-videncia/videncia/", "Videncia natural", "tarot", ["videncia", "vidente", "vision", "visión", "medium", "médium", "percibir"]),
+    G("/tarot-y-videncia/orientacion-espiritual/", "Orientación espiritual", "tarot", ["orientacion", "orientación", "guia", "guía", "no se que hacer", "no sé qué hacer", "consejo", "que camino", "decision", "decisión", "futuro", "que va a pasar", "saber", "adivinar", "claridad", "perdida", "perdido"]),
     // Rituales / anti-brujería / desamarres
-    G("/rituales-y-trabajos/", "¿Te hicieron un trabajo?", "rituales", ["me hicieron", "hicieron un trabajo", "trabajo en contra", "dano", "daño", "brujeria", "brujería", "embrujado", "hechizo en contra", "me hicieron mal", "corte de danos", "corte de daños"]),
-    G("/rituales-y-trabajos/", "Contra hechizos", "rituales", ["contra hechizo", "me hicieron un hechizo", "hechizada", "hechizado", "hechizo"]),
-    G("/rituales-y-trabajos/", "Desamarres", "rituales", ["desamarre", "romper amarre", "quitar amarre", "deshacer amarre", "amarrado"]),
+    G("/rituales-y-trabajos/te-hicieron-un-trabajo/", "¿Te hicieron un trabajo?", "rituales", ["me hicieron", "hicieron un trabajo", "trabajo en contra", "me hicieron mal", "embrujado", "todo se complico", "todo me sale mal"]),
+    G("/rituales-y-trabajos/corte-de-danos/", "Anti-brujería y corte de daños", "rituales", ["dano", "daño", "danos", "daños", "brujeria", "brujería", "corte de danos", "corte de daños", "anti brujeria", "antibrujeria", "sacar el daño", "cortar el daño"]),
+    G("/rituales-y-trabajos/contra-hechizos/", "Contra hechizos", "rituales", ["contra hechizo", "me hicieron un hechizo", "hechizada", "hechizado", "hechizo", "maleficio", "hechizo en contra"]),
+    G("/rituales-y-trabajos/desamarres/", "Desamarres", "rituales", ["desamarre", "desamarrar", "romper amarre", "quitar amarre", "deshacer amarre", "sacar un amarre", "sacarme un amarre", "sacar el amarre", "amarrado", "atadura", "liberarme", "soltar"]),
+    G("/rituales-y-trabajos/rituales/", "Rituales a medida", "rituales", ["ritual", "trabajo espiritual", "trabajo a medida", "no se que necesito", "algo a medida"]),
     // Limpiezas / protección
-    G("/limpiezas-y-proteccion/", "Limpieza energética", "limpiezas", ["limpieza", "limpiar", "energia pesada", "energía pesada", "mala energia", "mala energía", "cargado", "pesado", "envidia", "mal de ojo", "ojeado", "me tienen envidia"]),
-    G("/limpiezas-y-proteccion/", "Protección", "limpiezas", ["proteccion", "protección", "proteger", "protegerme", "escudo", "familia", "mis hijos", "hijos", "casa", "hogar"]),
-    G("/limpiezas-y-proteccion/", "Apertura de caminos", "limpiezas", ["bloqueo", "bloqueada", "bloqueado", "trabada", "trabado", "nada me sale", "estancada", "estancado", "abrir caminos", "apertura"]),
-    G("/limpiezas-y-proteccion/", "Armonización personal", "limpiezas", ["equilibrio", "paz interior", "ansiedad", "estres", "estrés", "stress", "angustia", "triste", "tristeza", "deprimida", "deprimido", "bajon", "bajón", "mal animo", "ánimo"]),
+    G("/limpiezas-y-proteccion/limpieza-energetica/", "Limpieza energética", "limpiezas", ["limpieza", "limpiar", "energia pesada", "energía pesada", "mala energia", "mala energía", "cargado", "pesado", "envidia", "mal de ojo", "ojeado", "me tienen envidia"]),
+    G("/limpiezas-y-proteccion/proteccion/", "Protección", "limpiezas", ["proteccion", "protección", "proteger", "protegerme", "escudo", "familia", "mis hijos", "hijos", "mi casa", "la casa", "hogar", "me quieren mal", "envidian"]),
+    G("/limpiezas-y-proteccion/apertura-de-caminos/", "Apertura de caminos", "limpiezas", ["bloqueo", "bloqueada", "bloqueado", "trabada", "trabado", "nada me sale", "estancada", "estancado", "abrir caminos", "apertura"]),
+    G("/limpiezas-y-proteccion/armonizacion/", "Armonización personal", "limpiezas", ["equilibrio", "paz interior", "ansiedad", "estres", "estrés", "stress", "angustia", "triste", "tristeza", "deprimida", "deprimido", "bajon", "bajón", "mal animo", "ánimo", "armonizacion", "armonización"]),
     // Prosperidad / dinero / trabajo
-    G("/prosperidad-y-abundancia/", "Problemas de dinero", "prosperidad", ["dinero", "plata", "deuda", "deudas", "no me alcanza", "sin plata", "problemas de dinero"]),
-    G("/prosperidad-y-abundancia/", "Desbloqueo laboral", "prosperidad", ["trabajo", "laburo", "empleo", "sin trabajo", "conseguir trabajo", "desempleo", "problemas laborales", "jefe", "negocio", "local", "comercio", "ventas"]),
-    G("/prosperidad-y-abundancia/", "Prosperidad y abundancia", "prosperidad", ["prosperidad", "abundancia", "que me vaya bien", "progresar", "crecer", "oportunidades"]),
-    G("/prosperidad-y-abundancia/", "Suerte en el juego", "prosperidad", ["suerte", "juego", "loteria", "lotería", "quiniela", "apuestas"])
+    G("/prosperidad-y-abundancia/prosperidad/", "Prosperidad y abundancia", "prosperidad", ["prosperidad", "abundancia", "que me vaya bien", "progresar", "crecer", "oportunidades", "dinero", "plata", "deuda", "deudas", "no me alcanza", "sin plata", "problemas de dinero"]),
+    G("/prosperidad-y-abundancia/desbloqueo-laboral/", "Desbloqueo laboral y dinero", "prosperidad", ["trabajo", "laburo", "empleo", "sin trabajo", "conseguir trabajo", "desempleo", "problemas laborales", "jefe", "negocio", "local", "comercio", "ventas", "desbloqueo"]),
+    G("/prosperidad-y-abundancia/suerte-en-el-juego/", "Suerte en el juego", "prosperidad", ["suerte", "juego", "loteria", "lotería", "quiniela", "apuestas", "casino"])
   ];
 
   function normalize(s) {
