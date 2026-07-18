@@ -218,14 +218,8 @@
     });
   })();
 
-  // ---- WhatsApp lead tracking: unique code per click + source + GTM event ----
+  // ---- WhatsApp lead tracking: origen del click + código + evento GTM ----
   (function () {
-    var CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // sin caracteres ambiguos
-    function rnd(n) {
-      var s = "";
-      for (var i = 0; i < n; i++) s += CHARS.charAt(Math.floor(Math.random() * CHARS.length));
-      return s;
-    }
     function sourceOf(a) {
       if (a.getAttribute("data-wa-source")) return a.getAttribute("data-wa-source");
       if (a.classList.contains("wa-btn--floating")) return "flotante";
@@ -251,13 +245,13 @@
       var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
       if (!a) return;
       var src = sourceOf(a);
-      var code = "CDO-" + src.toUpperCase().replace(/[^A-Z0-9-]/g, "").slice(0, 20) + "-" + rnd(4);
+      // leer el ÚNICO código que ya viaja en el mensaje (no inyectamos un segundo)
+      var code = "";
       try {
-        var u = new URL(a.href);
-        var text = (u.searchParams.get("text") || "").replace(/\n*\(Ref:[^)]*\)\s*$/i, "");
-        u.searchParams.set("text", text + "\n\n(Ref: " + code + ")");
-        a.href = u.toString();
-      } catch (err) { /* si no se puede parsear, se abre igual */ }
+        var text = new URL(a.href).searchParams.get("text") || "";
+        var m = text.match(/\(Cód\. #([^)]+)\)/);
+        if (m) code = m[1];
+      } catch (err) { /* si no se puede parsear, seguimos igual */ }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: "whatsapp_click", wa_source: src, wa_code: code });
     }, true); // fase de captura → corre antes de navegar
@@ -303,15 +297,14 @@
   }
   var CODE = catPrefix() + "-" + genRand();
 
-  // Anexar el código + instrucción a cada link de WhatsApp
+  // Anexar al mensaje: asegura un beneficio GRATIS + urgencia + UN solo código
   var extra = encodeURIComponent(
-    "\n\nMi código de reserva es #" + CODE +
-    ". Envío este mensaje para asegurar mi cupo de esta semana."
+    "\n\nLo mando ahora para no quedarme sin mi consulta gratis de esta semana. (Cód. #" + CODE + ")"
   );
   var links = document.querySelectorAll('a[href*="wa.me"]');
   for (var i = 0; i < links.length; i++) {
     var h = links[i].getAttribute("href");
-    if (h && h.indexOf("text=") !== -1 && h.indexOf("c%C3%B3digo%20de%20reserva") === -1 && h.indexOf("digo%20de%20reserva") === -1) {
+    if (h && h.indexOf("text=") !== -1 && h.indexOf("C%C3%B3d.") === -1) {
       links[i].setAttribute("href", h + extra);
     }
   }
@@ -325,7 +318,7 @@
     bubble.className = "cdo-cupos-bubble";
     bubble.innerHTML =
       '<button class="cdo-cupos-bubble__x" aria-label="Cerrar">&times;</button>' +
-      'Esta semana quedan <strong>pocos cupos</strong> para consulta gratuita. Aseguremos el tuyo 🕯️';
+      'Esta semana quedan <strong>pocas consultas gratis</strong>. Aseguremos la tuya 🕯️';
     document.body.appendChild(bubble);
     // aparece con la INTERACCIÓN: cuando la persona scrollea y ya se enganchó
     var shown = false;
