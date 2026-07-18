@@ -109,17 +109,29 @@
 .cdo-hero-servicio .badge { margin-bottom: var(--space-4); }
 .cdo-hero-servicio h1 {
   font-family: var(--font-display);
-  /* más conservador que --fs-h1: hay títulos largos (ej. "Amarres de dominio con desespero") */
-  font-size: clamp(1.9rem, 6.5vw, 3.4rem);
-  line-height: 1.08;
+  /* nombre del ritual bien grande (títulos cortos); los largos escalan por vw */
+  font-size: clamp(2.6rem, 8vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
   color: var(--text-heading);
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-3);
   overflow-wrap: break-word;
 }
-.cdo-hero-servicio__lead {
-  font-size: var(--fs-lead);
+/* Subtítulo = lo que cura el dolor */
+.cdo-hero-servicio__sub {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.6vw, 1.85rem);
+  line-height: 1.3;
+  font-weight: 500;
   color: var(--text-body);
-  line-height: 1.55;
+  margin: 0 0 var(--space-5);
+  max-width: 34rem;
+}
+.cdo-hero-servicio__sub .gold-accent { color: var(--gold-300); }
+.cdo-hero-servicio__lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
   margin: 0 0 var(--space-6);
   max-width: 40rem;
 }
