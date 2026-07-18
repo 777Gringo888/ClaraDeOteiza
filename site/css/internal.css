@@ -160,6 +160,7 @@
   color: var(--text-heading);
   margin: var(--space-8) 0 var(--space-4);
   line-height: 1.15;
+  clear: both; /* que cada sección arranque debajo de la foto flotante */
 }
 .cdo-prose h2:first-child { margin-top: 0; }
 .cdo-prose h2 .gold-accent { color: var(--text-gold); }
@@ -196,8 +197,8 @@
 }
 .cdo-gallery figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
 
-/* ---- Foto única del ritual dentro del contenido (vertical, responsive) ---- */
-.cdo-figure { margin: var(--space-6) auto; max-width: 420px; }
+/* ---- Foto única del ritual, integrada al texto ---- */
+.cdo-figure { margin: var(--space-4) auto var(--space-6); max-width: 420px; }
 .cdo-figure img {
   width: 100%;
   height: auto;
@@ -207,6 +208,16 @@
   display: block;
 }
 .cdo-figure figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
+/* Desktop: la foto flota y el texto la envuelve (queda integrada a la nota) */
+@media (min-width: 720px) {
+  .cdo-figure {
+    float: left;
+    width: 300px;
+    max-width: none;
+    margin: var(--space-1) var(--space-6) var(--space-3) 0;
+  }
+  .cdo-figure figcaption { text-align: left; }
+}
 
 /* ---- Contenido en filas de imagen + texto (alternadas) ---- */
 .cdo-features { padding: var(--section-y) 0; }
