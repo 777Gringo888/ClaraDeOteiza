@@ -196,24 +196,17 @@
 }
 .cdo-gallery figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
 
-/* ---- Foto única del ritual dentro del contenido ---- */
-.cdo-figure { margin: var(--space-6) 0; }
+/* ---- Foto única del ritual dentro del contenido (vertical, responsive) ---- */
+.cdo-figure { margin: var(--space-6) auto; max-width: 420px; }
 .cdo-figure img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-gold);
   box-shadow: var(--shadow-md);
   display: block;
 }
 .cdo-figure figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
-/* En mobile: imagen a todo el ancho (full-bleed, de borde a borde) */
-@media (max-width: 819px) {
-  .cdo-figure { margin-inline: calc(-1 * var(--gutter)); }
-  .cdo-figure img { border-radius: 0; border-left: 0; border-right: 0; aspect-ratio: 4 / 3; }
-  .cdo-figure figcaption { padding-inline: var(--gutter); }
-}
 
 /* ---- Contenido en filas de imagen + texto (alternadas) ---- */
 .cdo-features { padding: var(--section-y) 0; }
