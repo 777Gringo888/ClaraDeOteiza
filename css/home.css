@@ -100,7 +100,7 @@ body { background: var(--bg-base); overflow-x: hidden; }
 .wa-btn:active { transform: translateY(0) scale(1); filter: brightness(0.97); }
 
 .wa-btn--sm { padding: 0.6rem 1.15rem; font-size: 0.95rem; }
-.wa-btn--lg { padding: 1.1rem 2.2rem; font-size: 1.15rem; }
+.wa-btn--lg { padding: 1.2rem 2.5rem; font-size: 1.22rem; }
 .wa-btn--full { width: 100%; }
 
 .wa-btn--floating {
@@ -488,11 +488,11 @@ body { background: var(--bg-base); overflow-x: hidden; }
   margin-bottom: 1.6rem;
 }
 .chip {
-  padding: 0.7rem 1.15rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--radius-pill);
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 600;
   line-height: 1;
   color: var(--cream-100);
@@ -525,12 +525,12 @@ body { background: var(--bg-base); overflow-x: hidden; }
   flex: 1;
   min-width: 220px;
   font-family: var(--font-body);
-  font-size: var(--fs-body);
+  font-size: 1.1rem;
   color: var(--cream-50);
   background: var(--surface-2);
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-pill);
-  padding: 0.9rem 1.25rem;
+  padding: 1.05rem 1.45rem;
   outline: none;
   transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
@@ -542,14 +542,14 @@ body { background: var(--bg-base); overflow-x: hidden; }
 .cdo-derivador__submit {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.9rem 1.6rem;
+  gap: 0.5rem;
+  padding: 1.05rem 2rem;
   border-radius: var(--radius-pill);
   background: linear-gradient(180deg, var(--gold-400), var(--gold-600));
   color: var(--text-on-gold);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.12rem;
   border: 1px solid rgba(255,255,255,0.18);
   cursor: pointer;
   box-shadow: var(--shadow-gold-glow);
@@ -1122,8 +1122,8 @@ body { background: var(--bg-base); overflow-x: hidden; }
   .cdo-arrows { display: none !important; }
   .wa-btn--floating { width: 54px; height: 54px; }
   /* WhatsApp buttons adapt cleanly on phones */
-  .wa-btn { font-size: 1rem; padding: 0.85rem 1.3rem; }
-  .wa-btn--lg { font-size: 1.05rem; padding: 1rem 1.5rem; }
+  .wa-btn { font-size: 1.05rem; padding: 0.95rem 1.4rem; }
+  .wa-btn--lg { font-size: 1.12rem; padding: 1.1rem 1.7rem; }
   .cdo-hero__cta .wa-btn { width: 100%; }
   .cdo-cta-central__btn .wa-btn { width: 100%; }
   /* service-row CTAs stack full-width so they never cram */
