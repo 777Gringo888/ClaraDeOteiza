@@ -285,17 +285,23 @@
 (function () {
   "use strict";
 
-  // ---- Código de reserva único por sesión ----
-  function genCode() {
+  // ---- Código de reserva único = ref (prefijo de categoría + aleatorio) ----
+  function genRand() {
     var s = "ABCDEFGHJKMNPQRSTUVWXYZ23456789", c = "";
     for (var i = 0; i < 4; i++) c += s.charAt(Math.floor(Math.random() * s.length));
     return c;
   }
-  var CODE;
-  try {
-    CODE = sessionStorage.getItem("cdo_res");
-    if (!CODE) { CODE = genCode(); sessionStorage.setItem("cdo_res", CODE); }
-  } catch (e) { CODE = genCode(); }
+  function catPrefix() {
+    var p = location.pathname.toLowerCase();
+    var map = {
+      "amarres": "AMR", "tarot-y-videncia": "TAR", "limpiezas-y-proteccion": "LIM",
+      "prosperidad-y-abundancia": "PRO", "rituales-y-trabajos": "RIT"
+    };
+    // busca la categoría en cualquier parte del path (robusto a subcarpeta de preview)
+    for (var k in map) { if (p.indexOf(k) !== -1) return map[k]; }
+    return "CDO";
+  }
+  var CODE = catPrefix() + "-" + genRand();
 
   // Anexar el código + instrucción a cada link de WhatsApp
   var extra = encodeURIComponent(
@@ -321,7 +327,17 @@
       '<button class="cdo-cupos-bubble__x" aria-label="Cerrar">&times;</button>' +
       'Esta semana quedan <strong>pocos cupos</strong> para consulta gratuita. Aseguremos el tuyo 🕯️';
     document.body.appendChild(bubble);
-    var timer = setTimeout(function () { bubble.classList.add("is-show"); }, 6500);
+    // aparece con la INTERACCIÓN: cuando la persona scrollea y ya se enganchó
+    var shown = false;
+    function reveal() {
+      if (shown) return;
+      if (window.scrollY > 700 || window.scrollY > document.documentElement.scrollHeight * 0.25) {
+        shown = true;
+        bubble.classList.add("is-show");
+        window.removeEventListener("scroll", reveal);
+      }
+    }
+    window.addEventListener("scroll", reveal, { passive: true });
     bubble.querySelector(".cdo-cupos-bubble__x").addEventListener("click", function (ev) {
       ev.stopPropagation();
       bubble.classList.remove("is-show");
