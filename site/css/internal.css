@@ -1,0 +1,343 @@
+/* ============================================================
+   Clara de Oteiza — PÁGINAS INTERNAS (landings de servicios)
+   Reutiliza el sistema de la home (header, footer, wa-btn,
+   sec-head, cta-central, testimonios) y agrega los componentes
+   propios de una landing: breadcrumb, hero compacto, prosa,
+   señales y páginas relacionadas.
+   ============================================================ */
+
+/* ---- Breadcrumb ---- */
+/* El header es sticky (ya ocupa su alto en el flujo), así que acá va poco espacio.
+   Ojo: usar padding-block para NO pisar el padding-inline que da .container.
+   position+z-index para quedar POR ENCIMA del scrim del videostage (si no, lo tapa). */
+.cdo-breadcrumb {
+  position: relative;
+  z-index: var(--z-content);
+  padding-block: var(--space-4) 0;
+}
+.cdo-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--text-body);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* el video de fondo es claro arriba: sombra para que se lea bien */
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+}
+.cdo-breadcrumb__list a {
+  color: var(--cream-200);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.cdo-breadcrumb__list a:hover { color: var(--text-gold); }
+.cdo-breadcrumb__sep { opacity: 0.7; }
+.cdo-breadcrumb__current { color: var(--text-gold); }
+
+/* ---- Tope de página interna: DOS heros apilados sobre el video motion-bg ---- */
+.cdo-page-hero { position: relative; overflow: hidden; }
+
+/* ===== Sello de confianza de Clara dentro del hero ===== */
+.cdo-hero-trust {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-hairline);
+  max-width: 40rem;
+}
+.cdo-hero-trust__photo {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-gold-glow);
+  flex: 0 0 auto;
+}
+.cdo-hero-trust__text { font-size: 0.92rem; color: var(--text-muted); line-height: 1.4; margin: 0; }
+.cdo-hero-trust__text strong { color: var(--text-heading); font-weight: 600; }
+.cdo-hero-trust__text span { display: block; margin-top: 2px; }
+
+/* ===== HERO — Servicio ===== */
+.cdo-hero-servicio {
+  position: relative;
+  z-index: var(--z-content);
+  padding-block: var(--space-6) var(--space-8);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: center;
+}
+@media (min-width: 940px) {
+  .cdo-hero-servicio { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-8); }
+}
+.cdo-hero-servicio__main { min-width: 0; }
+
+/* Tarjeta de testimonio en el hero (prueba social arriba).
+   En mobile va debajo del botón (el CTA sigue arriba); en desktop, a la derecha. */
+.cdo-hero-proof { display: block; width: 100%; max-width: 360px; margin-inline: auto; }
+@media (min-width: 940px) {
+  .cdo-hero-proof { justify-self: end; width: 300px; max-width: none; margin: 0; }
+}
+.cdo-hero-proof__card {
+  background: linear-gradient(180deg, rgba(43,21,18,0.82), rgba(10,7,20,0.82));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(4px);
+}
+.cdo-hero-proof__head { display: flex; flex-direction: column; gap: 2px; margin-bottom: var(--space-3); }
+.cdo-hero-proof__stars { color: var(--gold-400); letter-spacing: 2px; font-size: 0.95rem; }
+.cdo-hero-proof__label { color: var(--text-muted); font-size: 0.8rem; }
+.cdo-hero-proof__card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+.cdo-hero-servicio .badge { margin-bottom: var(--space-4); }
+.cdo-hero-servicio h1 {
+  font-family: var(--font-display);
+  /* más conservador que --fs-h1: hay títulos largos (ej. "Amarres de dominio con desespero") */
+  font-size: clamp(1.9rem, 6.5vw, 3.4rem);
+  line-height: 1.08;
+  color: var(--text-heading);
+  margin: 0 0 var(--space-4);
+  overflow-wrap: break-word;
+}
+.cdo-hero-servicio__lead {
+  font-size: var(--fs-lead);
+  color: var(--text-body);
+  line-height: 1.55;
+  margin: 0 0 var(--space-6);
+  max-width: 40rem;
+}
+.cdo-hero-servicio__cta { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.cdo-hero-servicio__note {
+  margin: var(--space-5) 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---- Cuerpo de contenido (prosa SEO) ---- */
+.cdo-content { padding: var(--section-y) 0; }
+.cdo-content__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+}
+@media (min-width: 960px) {
+  .cdo-content__grid { grid-template-columns: minmax(0, 1fr) 20rem; }
+}
+
+.cdo-prose { max-width: 68ch; }
+.cdo-prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--text-heading);
+  margin: var(--space-8) 0 var(--space-4);
+  line-height: 1.15;
+}
+.cdo-prose h2:first-child { margin-top: 0; }
+.cdo-prose h2 .gold-accent { color: var(--text-gold); }
+.cdo-prose p {
+  color: var(--text-body);
+  font-size: 1.075rem;
+  line-height: 1.75;
+  margin: 0 0 var(--space-5);
+}
+.cdo-prose strong { color: var(--text-heading); font-weight: 600; }
+
+/* ---- Galería del ritual (imágenes dentro del contenido) ---- */
+.cdo-gallery { margin: var(--space-6) 0; }
+.cdo-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+@media (max-width: 620px) { .cdo-gallery__grid { grid-template-columns: repeat(2, 1fr); } }
+.cdo-gallery__item {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-sm);
+}
+.cdo-gallery__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--dur-slow) var(--ease-out); }
+.cdo-gallery__item::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(6,4,14,0) 55%, rgba(6,4,14,0.55) 100%);
+  pointer-events: none;
+}
+.cdo-gallery figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
+
+/* ---- Lista de señales (cuándo te puede ayudar) ---- */
+.cdo-signals { list-style: none; margin: var(--space-4) 0 var(--space-6); padding: 0; display: grid; gap: var(--space-3); }
+.cdo-signals li {
+  position: relative;
+  padding: var(--space-4) var(--space-5) var(--space-4) calc(var(--space-6) + 12px);
+  background: linear-gradient(180deg, rgba(43,21,18,0.55), rgba(19,10,8,0.55));
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  color: var(--text-body);
+  line-height: 1.5;
+}
+.cdo-signals li::before {
+  content: "";
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  width: 18px; height: 18px;
+  margin-top: -9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 42%, var(--gold-300), var(--gold-600));
+  box-shadow: 0 0 12px rgba(207,162,74,0.5);
+}
+
+/* ---- Aside (magia blanca + CTA lateral) ---- */
+.cdo-aside { display: grid; gap: var(--space-5); align-content: start; }
+.cdo-aside__card {
+  background: linear-gradient(180deg, rgba(43,21,18,0.7), rgba(19,10,8,0.7));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+.cdo-aside__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--text-heading);
+  margin: 0 0 var(--space-3);
+}
+.cdo-aside__card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0 0 var(--space-4); }
+.cdo-aside__card .wa-btn { width: 100%; }
+.cdo-aside__trust {
+  display: flex; gap: var(--space-3); align-items: flex-start;
+  color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;
+}
+.cdo-aside__trust svg { flex: 0 0 auto; color: var(--gold-500); margin-top: 2px; }
+
+@media (min-width: 960px) {
+  .cdo-aside { position: sticky; top: calc(64px + var(--space-5)); }
+}
+
+/* ---- Presentación de Clara (autoridad + confianza) ---- */
+.cdo-author { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-author__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+}
+@media (min-width: 720px) {
+  .cdo-author__inner { grid-template-columns: 240px minmax(0, 1fr); gap: var(--space-8); }
+}
+.cdo-author__media { position: relative; width: 200px; margin: 0 auto; }
+@media (min-width: 720px) { .cdo-author__media { width: 240px; } }
+.cdo-author__media::before {
+  content: "";
+  position: absolute; inset: -14%;
+  background: radial-gradient(circle, var(--grad-ember) 0%, rgba(160,107,240,0) 68%);
+  filter: blur(6px);
+}
+.cdo-author__frame {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-gold-glow);
+}
+.cdo-author__frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
+.cdo-author__body .badge { margin-bottom: var(--space-4); }
+.cdo-author__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--text-heading);
+  margin: 0 0 var(--space-1);
+  line-height: 1.1;
+}
+.cdo-author__role { color: var(--text-gold); font-size: 1.05rem; margin: 0 0 var(--space-4); }
+.cdo-author__body p { color: var(--text-body); line-height: 1.7; margin: 0 0 var(--space-4); }
+.cdo-author__body p:last-child { margin-bottom: 0; }
+
+/* ---- Páginas relacionadas (enlazado interno para SEO) ---- */
+.cdo-related { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-related__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+.cdo-related__card {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  padding: var(--space-5);
+  background: linear-gradient(180deg, rgba(43,21,18,0.5), rgba(19,10,8,0.5));
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  color: var(--text-body);
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.cdo-related__card:hover { border-color: var(--border-gold); transform: translateY(-2px); }
+.cdo-related__card span[aria-hidden] { color: var(--text-gold); transition: transform var(--dur-fast) var(--ease-out); }
+.cdo-related__card:hover span[aria-hidden] { transform: translateX(3px); }
+
+/* ---- Barra de beneficios (por qué Clara) ---- */
+.cdo-benefits {
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+  background: rgba(6, 4, 14, 0.42);
+}
+.cdo-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-5);
+  padding-block: var(--space-5);
+}
+@media (min-width: 760px) { .cdo-benefits__grid { grid-template-columns: repeat(4, 1fr); } }
+.cdo-benefit { display: flex; align-items: center; gap: var(--space-3); }
+.cdo-benefit svg { flex: 0 0 auto; color: var(--gold-400); }
+.cdo-benefit span { display: flex; flex-direction: column; line-height: 1.35; color: var(--text-muted); font-size: 0.8rem; }
+.cdo-benefit strong { color: var(--text-heading); font-weight: 600; font-size: 0.98rem; margin-bottom: 1px; }
+
+/* ---- Preguntas frecuentes (FAQ) ---- */
+.cdo-faq { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
+.cdo-faq__list { max-width: 72ch; margin-top: var(--space-6); display: grid; gap: var(--space-3); }
+.cdo-faq__item {
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(43,21,18,0.5), rgba(19,10,8,0.5));
+  overflow: hidden;
+}
+.cdo-faq__item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--space-5);
+  font-weight: 600;
+  color: var(--text-heading);
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-4);
+}
+.cdo-faq__item summary::-webkit-details-marker { display: none; }
+.cdo-faq__item summary::after {
+  content: "+";
+  color: var(--text-gold);
+  font-size: 1.5rem; line-height: 1;
+  flex: 0 0 auto;
+}
+.cdo-faq__item[open] summary::after { content: "\2212"; }
+.cdo-faq__item p {
+  margin: 0;
+  padding: 0 var(--space-5) var(--space-5);
+  color: var(--text-body);
+  line-height: 1.7;
+}
