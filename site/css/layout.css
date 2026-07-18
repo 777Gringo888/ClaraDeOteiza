@@ -1,0 +1,53 @@
+/* ============================================================
+   Clara de Oteiza — SPACING, RADIUS, SHADOW, MOTION, LAYOUT
+   ============================================================ */
+:root {
+  /* Spacing scale (8px base rhythm) */
+  --space-1:  0.25rem;   /* 4  */
+  --space-2:  0.5rem;    /* 8  */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.5rem;    /* 24 */
+  --space-6:  2rem;      /* 32 */
+  --space-7:  3rem;      /* 48 */
+  --space-8:  4rem;      /* 64 */
+  --space-9:  6rem;      /* 96 */
+  --space-10: 8rem;      /* 128 */
+
+  --section-y: clamp(3.5rem, 9vw, 7rem);  /* @kind spacing */
+  --gutter:    clamp(1.25rem, 5vw, 2.5rem); /* @kind spacing */
+  --maxw:      1200px;   /* content max width */
+  --maxw-prose:64ch;
+
+  /* Radius — soft but not pill-y; gold-framed cards stay elegant */
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  16px;
+  --radius-lg:  22px;
+  --radius-xl:  32px;
+  --radius-pill:999px;
+  --radius-circle:50%;
+
+  /* Shadows — warm, deep, candle-lit. No cool grey shadows. */
+  --shadow-sm:  0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-md:  0 10px 30px rgba(0, 0, 0, 0.55);
+  --shadow-lg:  0 26px 60px rgba(0, 0, 0, 0.60);
+  --shadow-red-glow:  0 12px 40px rgba(110, 52, 206, 0.42);
+  --shadow-gold-glow: 0 10px 34px rgba(207, 162, 74, 0.30);
+  --shadow-inset-top: inset 0 1px 0 rgba(248, 233, 190, 0.10);
+
+  /* Motion — slow, warm, never bouncy for ambience */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);   /* @kind other */
+  --ease-in-out:cubic-bezier(0.65, 0, 0.35, 1);   /* @kind other */
+  --dur-fast:   160ms;   /* @kind other */
+  --dur-base:   280ms;   /* @kind other */
+  --dur-slow:   520ms;   /* @kind other */
+  --dur-ambient:22s;   /* @kind other */
+
+  /* Z-index */
+  --z-bg:      0;   /* @kind other */
+  --z-content: 1;   /* @kind other */
+  --z-header:  50;   /* @kind other */
+  --z-float:   80;   /* @kind other */
+  --z-modal:   100;   /* @kind other */
+}
