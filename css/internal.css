@@ -130,8 +130,8 @@
 }
 .cdo-hero-servicio__sub .gold-accent { color: var(--gold-300); font-weight: var(--fw-extra); }
 .cdo-hero-servicio__lead {
-  font-size: 1.05rem;
-  color: var(--text-muted);
+  font-size: 1.08rem;
+  color: var(--cream-200);
   line-height: 1.6;
   margin: 0 0 var(--space-6);
   max-width: 40rem;
@@ -408,16 +408,16 @@
 .cdo-related__card {
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
   padding: var(--space-5);
-  background: linear-gradient(180deg, rgba(43,21,18,0.5), rgba(19,10,8,0.5));
-  border: 1px solid var(--border-hairline);
+  background: linear-gradient(180deg, rgba(110, 52, 206, 0.12), rgba(20, 12, 38, 0.55));
+  border: 1px solid rgba(138, 84, 224, 0.28);
   border-radius: var(--radius-md);
   color: var(--text-body);
   text-decoration: none;
   font-weight: 500;
-  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
-.cdo-related__card:hover { border-color: var(--border-gold); transform: translateY(-2px); }
-.cdo-related__card span[aria-hidden] { color: var(--text-gold); transition: transform var(--dur-fast) var(--ease-out); }
+.cdo-related__card:hover { border-color: var(--red-400); background: linear-gradient(180deg, rgba(110, 52, 206, 0.22), rgba(20, 12, 38, 0.6)); transform: translateY(-2px); }
+.cdo-related__card span[aria-hidden] { color: var(--red-400); transition: transform var(--dur-fast) var(--ease-out); }
 .cdo-related__card:hover span[aria-hidden] { transform: translateX(3px); }
 
 /* ---- Barra de beneficios (por qué Clara) ---- */
@@ -462,15 +462,15 @@
 .cdo-faq__item summary::-webkit-details-marker { display: none; }
 .cdo-faq__item summary::after {
   content: "+";
-  color: var(--text-gold);
-  font-size: 1.5rem; line-height: 1;
+  color: var(--gold-300);
+  font-size: 1.6rem; line-height: 1;
   flex: 0 0 auto;
 }
 .cdo-faq__item[open] summary::after { content: "\2212"; }
 .cdo-faq__item p {
   margin: 0;
   padding: 0 var(--space-6) var(--space-5);
-  color: var(--text-muted); /* respuesta en otro color, se diferencia de la pregunta */
+  color: var(--cream-200); /* crema limpio: buena legibilidad, sin el tono marrón */
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -609,9 +609,19 @@
 .cdo-social__num { font-family: var(--font-display); font-weight: var(--fw-extra); color: var(--text-heading); font-size: 1.15rem; line-height: 1; }
 .cdo-social__lbl { display: block; font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
-/* microcopy de urgencia bajo los CTA */
-.cdo-urgency { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--space-4); font-size: 0.9rem; color: var(--gold-300); }
-.cdo-urgency::before { content: "🕯️"; font-size: 0.95rem; }
+/* microcopy de urgencia bajo los CTA — destacada (pill) */
+.cdo-urgency {
+  display: inline-flex; align-items: flex-start; gap: 0.55rem;
+  margin-top: var(--space-5);
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  background: rgba(241, 216, 150, 0.07);
+  font-size: 1rem; color: var(--gold-200); line-height: 1.45;
+}
+.cdo-urgency::before { content: "🕯️"; font-size: 1rem; flex: 0 0 auto; line-height: 1.45; }
+.cdo-urgency strong { color: var(--text-heading); font-weight: 700; }
+.cdo-urgency em { color: var(--gold-300); font-style: normal; font-weight: 700; }
 
 /* párrafo destacado: Clara afirma su poder (cierra el "¿qué es?") */
 .cdo-affirm {
