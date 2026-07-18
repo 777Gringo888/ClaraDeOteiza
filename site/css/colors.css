@@ -1,8 +1,14 @@
 /* ============================================================
    Clara de Oteiza — COLOR TOKENS
-   Dark mode IS the identity. Warm blacks, deep red / wine /
-   burgundy accents, and gold. Zero cold violets. Body text is
-   always warm cream (#F0EAE0 or lighter) for WCAG AA contrast.
+   Dark mode IS the identity: violet-black backgrounds, a
+   blue-violet primary accent (matches the candlelit videos) and
+   warm gold for detailing. Body text is always warm cream for
+   WCAG-AA contrast.
+
+   NOTE on legacy names: the --wine-* and --red-* tokens are
+   historical names that now hold VIOLET values (the palette was
+   moved from the original wine/red to blue-violet). Don't rename
+   them blindly — they're referenced across the CSS. See DESIGN.md.
    ============================================================ */
 :root {
   /* --- Warm blacks (backgrounds) --- */
