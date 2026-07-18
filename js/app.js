@@ -116,9 +116,7 @@
         html =
           '<p class="cdo-result__intro">' + esc(data.intro) + '</p>' +
           '<p class="cdo-result__kicker">Te puede servir</p>' +
-          '<div class="cdo-result__pages">' + pages + '</div>' +
-          '<a class="wa-btn wa-btn--sm cdo-result__wa" href="' + esc(waFor(data)) + '" target="_blank" rel="noopener noreferrer">' +
-            waGlyph(18) + 'Reservá tu consulta gratis</a>';
+          '<div class="cdo-result__pages">' + pages + '</div>';
       }
       resultEl.innerHTML = html;
       resultEl.hidden = false;
@@ -249,7 +247,7 @@
       var code = "";
       try {
         var text = new URL(a.href).searchParams.get("text") || "";
-        var m = text.match(/\(Cód\. #([^)]+)\)/);
+        var m = text.match(/#([A-Z]{3}-[0-9A-Z]{4})/);
         if (m) code = m[1];
       } catch (err) { /* si no se puede parsear, seguimos igual */ }
       window.dataLayer = window.dataLayer || [];
@@ -297,14 +295,15 @@
   }
   var CODE = catPrefix() + "-" + genRand();
 
-  // Anexar al mensaje: asegura un beneficio GRATIS + urgencia + UN solo código
+  // Anexar al mensaje: instrucción clara (código de reserva de consulta gratis) + UN solo código
   var extra = encodeURIComponent(
-    "\n\nLo mando ahora para no quedarme sin mi consulta gratis de esta semana. (Cód. #" + CODE + ")"
+    "\n\nMi código de reserva de consulta gratis es #" + CODE +
+    ". Envío este mensaje para entrar en el cupo de consultas de esta semana."
   );
   var links = document.querySelectorAll('a[href*="wa.me"]');
   for (var i = 0; i < links.length; i++) {
     var h = links[i].getAttribute("href");
-    if (h && h.indexOf("text=") !== -1 && h.indexOf("C%C3%B3d.") === -1) {
+    if (h && h.indexOf("text=") !== -1 && h.indexOf("reserva%20de%20consulta") === -1) {
       links[i].setAttribute("href", h + extra);
     }
   }

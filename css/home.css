@@ -739,6 +739,26 @@ body { background: var(--bg-base); overflow-x: hidden; }
 }
 .cdo-affirm strong { color: var(--gold-300); }
 .cdo-sobre__cta { margin-top: 1.5rem; }
+/* botón dorado (alternativa al verde de WhatsApp, para CTAs secundarias) */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.9rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(180deg, var(--gold-400), var(--gold-600));
+  color: var(--text-on-gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: var(--shadow-gold-glow);
+  transition: filter var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.btn-gold:hover, .btn-gold:focus-visible { filter: brightness(1.05); transform: translateY(-1px); }
+.btn-gold span[aria-hidden] { transition: transform var(--dur-fast) var(--ease-out); }
+.btn-gold:hover span[aria-hidden] { transform: translateX(3px); }
 /* píldora de urgencia (cupo semanal) — misma que las internas */
 .cdo-urgency {
   display: inline-block;
@@ -902,6 +922,18 @@ body { background: var(--bg-base); overflow-x: hidden; }
 .cdo-cta-central__candle { font-size: 2rem; display: block; margin-bottom: 0.6rem; }
 .cdo-cta-central h2 { margin-bottom: 0.9rem; }
 .cdo-cta-central p { color: var(--text-body); font-size: var(--fs-lead); margin-bottom: 1.7rem; }
+.cdo-cta-central .cdo-cta-central__urgency {
+  display: inline-block;
+  margin: -0.4rem auto 1.6rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 14px;
+  background: rgba(10, 7, 20, 0.55);
+  font-size: 0.95rem;
+  color: var(--gold-200);
+  line-height: 1.45;
+}
+.cdo-cta-central .cdo-cta-central__urgency strong { color: var(--text-heading); font-weight: 700; }
 .cdo-cta-central__btn { display: flex; justify-content: center; }
 
 /* =====================================================
