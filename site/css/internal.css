@@ -159,7 +159,8 @@
 .cdo-prose__cta { clear: both; margin-top: var(--space-7); text-align: center; }
 .cdo-prose h2 {
   font-family: var(--font-display);
-  font-size: var(--fs-h3);
+  /* más presencia: acompaña la escala del hero sin competir con el H1 */
+  font-size: clamp(1.8rem, 4.6vw, 2.3rem);
   font-weight: var(--fw-bold); /* 700, no 800: subtítulos del contenido más livianos */
   color: var(--text-heading);
   margin: var(--space-8) 0 var(--space-4);
@@ -170,7 +171,7 @@
 .cdo-prose h2 .gold-accent { color: var(--text-gold); }
 .cdo-prose p {
   color: var(--text-body);
-  font-size: 1.075rem;
+  font-size: 1.15rem;
   line-height: 1.75;
   margin: 0 0 var(--space-5);
 }
@@ -262,20 +263,21 @@
 .cdo-signals { list-style: none; margin: var(--space-4) 0 var(--space-6); padding: 0; display: grid; gap: var(--space-3); }
 .cdo-signals li {
   position: relative;
-  padding: var(--space-4) var(--space-5) var(--space-4) calc(var(--space-6) + 12px);
+  padding: var(--space-5) var(--space-6) var(--space-5) calc(var(--space-7) + 6px);
   background: linear-gradient(180deg, rgba(43,21,18,0.55), rgba(19,10,8,0.55));
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-md);
   color: var(--text-body);
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 .cdo-signals li::before {
   content: "";
   position: absolute;
-  left: var(--space-4);
+  left: var(--space-5);
   top: 50%;
-  width: 18px; height: 18px;
-  margin-top: -9px;
+  width: 22px; height: 22px;
+  margin-top: -11px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 42%, var(--gold-300), var(--gold-600));
   box-shadow: 0 0 12px rgba(207,162,74,0.5);
@@ -424,7 +426,9 @@
 
 /* ---- Preguntas frecuentes (FAQ) ---- */
 .cdo-faq { padding: var(--section-y) 0; border-top: 1px solid var(--border-hairline); }
-.cdo-faq__list { max-width: 72ch; margin-top: var(--space-6); display: grid; gap: var(--space-3); }
+/* FAQ centrado: encabezado y lista alineados al centro de la página */
+.cdo-faq .sec-head { text-align: center; align-items: center; }
+.cdo-faq__list { max-width: 60rem; margin: var(--space-6) auto 0; display: grid; gap: var(--space-3); text-align: left; }
 .cdo-faq__item {
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-md);
@@ -434,7 +438,8 @@
 .cdo-faq__item summary {
   cursor: pointer;
   list-style: none;
-  padding: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  font-size: 1.12rem;
   font-weight: 600;
   color: var(--text-heading);
   display: flex; justify-content: space-between; align-items: center; gap: var(--space-4);
