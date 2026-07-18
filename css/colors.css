@@ -1,0 +1,80 @@
+/* ============================================================
+   Clara de Oteiza — COLOR TOKENS
+   Dark mode IS the identity. Warm blacks, deep red / wine /
+   burgundy accents, and gold. Zero cold violets. Body text is
+   always warm cream (#F0EAE0 or lighter) for WCAG AA contrast.
+   ============================================================ */
+:root {
+  /* --- Warm blacks (backgrounds) --- */
+  --ink-950: #0B0605;   /* deepest — page base */
+  --ink-900: #130A08;
+  --ink-850: #1A0D0A;
+  --ink-800: #22110D;   /* raised surface */
+  --ink-750: #2B1512;   /* card / elevated */
+  --ink-700: #381A16;   /* hairline on dark */
+
+  /* --- Blue-violet / purple (primary accent family) — matches the video --- */
+  --wine-950: #17092E;  /* deep violet-black */
+  --wine-900: #241046;  /* deep indigo-violet */
+  --wine-800: #331563;
+  --wine-700: #44208A;  /* royal blue-violet */
+  --red-600:  #5A2AB0;
+  --red-500:  #6E34CE;  /* signature blue-violet */
+  --red-400:  #8A54E0;
+  --ember-500:#A06BF0;  /* bright violet highlight */
+  --ember-400:#BE93F5;
+
+  /* --- Gold (secondary accent + detailing) --- */
+  --gold-800: #6E5220;
+  --gold-700: #8C6A2A;
+  --gold-600: #B08838;
+  --gold-500: #CFA24A;  /* signature gold */
+  --gold-400: #E1BE6C;
+  --gold-300: #F1D896;  /* bright gold text on dark */
+  --gold-200: #F8E9BE;
+
+  /* --- Warm creams (text + light surfaces) --- */
+  --cream-50:  #FBF7EF;
+  --cream-100: #F3ECDF;  /* primary body text */
+  --cream-200: #E7DBC7;
+  --cream-300: #D3C2A6;  /* muted text */
+  --cream-400: #B09C7C;  /* faint / disabled */
+
+  /* --- Utility --- */
+  --whatsapp:      #25D366;
+  --whatsapp-dark: #128C7E;
+  --success:       #4FB477;
+  --focus-ring:    #E1BE6C;
+
+  /* ---------------- SEMANTIC ALIASES ---------------- */
+  --bg-base:        #0A0714;   /* violet-black base (matches the video's mood) */
+  --bg-deep:        #06040E;
+  --surface-1:      var(--ink-850);
+  --surface-2:      var(--ink-800);
+  --surface-card:   var(--ink-750);
+  --surface-raised: var(--ink-700);
+
+  --text-heading:   var(--cream-50);
+  --text-body:      var(--cream-100);
+  --text-muted:     var(--cream-300);
+  --text-faint:     var(--cream-400);
+  --text-on-gold:   var(--ink-950);
+  --text-on-red:    var(--cream-50);
+  --text-gold:      var(--gold-300);
+
+  --accent-red:     var(--red-500);
+  --accent-red-strong: var(--red-600);
+  --accent-gold:    var(--gold-500);
+
+  --border-hairline: rgba(241, 216, 150, 0.14); /* faint gold */
+  --border-gold:     rgba(207, 162, 74, 0.45);
+  --border-gold-strong: var(--gold-500);
+  --border-wine:     rgba(110, 52, 206, 0.42);
+
+  /* Signature background gradient stops (slow-moving) */
+  --grad-a: #120726;
+  --grad-b: #241046;
+  --grad-c: #0A0714;
+  --grad-ember: rgba(160, 107, 240, 0.24);
+  --grad-gold:  rgba(207, 162, 74, 0.16);
+}
