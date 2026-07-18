@@ -56,11 +56,11 @@
 
   --text-heading:   var(--cream-50);
   --text-body:      var(--cream-100);
-  --text-muted:     var(--cream-300);
-  --text-faint:     var(--cream-400);
+  --text-muted:     var(--cream-200);   /* más claro: mejor contraste que el beige */
+  --text-faint:     var(--cream-300);
   --text-on-gold:   var(--ink-950);
   --text-on-red:    var(--cream-50);
-  --text-gold:      var(--gold-300);
+  --text-gold:      var(--gold-500);     /* destaques en dorado más rico/oscuro (contrasta mejor) */
 
   --accent-red:     var(--red-500);
   --accent-red-strong: var(--red-600);

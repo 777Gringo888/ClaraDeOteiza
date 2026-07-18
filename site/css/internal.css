@@ -133,7 +133,7 @@
   margin: 0 0 var(--space-5);
   max-width: 36rem;
 }
-.cdo-hero-servicio__sub .gold-accent { color: var(--gold-300); font-weight: var(--fw-extra); }
+.cdo-hero-servicio__sub .gold-accent { color: var(--gold-400); font-weight: var(--fw-extra); }
 .cdo-hero-servicio__lead {
   font-size: 1.08rem;
   color: var(--cream-200);
@@ -475,7 +475,7 @@
 .cdo-faq__item p {
   margin: 0;
   padding: 0 var(--space-6) var(--space-5);
-  color: var(--text-body); /* crema claro, buen contraste */
+  color: var(--gold-200); /* dorado cálido claro: alto contraste y se diferencia de la pregunta */
   font-size: 1.05rem;
   line-height: 1.7;
 }
