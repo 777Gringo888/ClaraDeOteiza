@@ -277,3 +277,56 @@
   })();
 
 })();
+
+/* ============================================================
+   CRO — Código de reserva + urgencia (cupos)
+   Corre en todas las páginas (script al final del body).
+   ============================================================ */
+(function () {
+  "use strict";
+
+  // ---- Código de reserva único por sesión ----
+  function genCode() {
+    var s = "ABCDEFGHJKMNPQRSTUVWXYZ23456789", c = "";
+    for (var i = 0; i < 4; i++) c += s.charAt(Math.floor(Math.random() * s.length));
+    return c;
+  }
+  var CODE;
+  try {
+    CODE = sessionStorage.getItem("cdo_res");
+    if (!CODE) { CODE = genCode(); sessionStorage.setItem("cdo_res", CODE); }
+  } catch (e) { CODE = genCode(); }
+
+  // Anexar el código + instrucción a cada link de WhatsApp
+  var extra = encodeURIComponent(
+    "\n\nMi código de reserva es #" + CODE +
+    ". Envío este mensaje para asegurar mi cupo de esta semana."
+  );
+  var links = document.querySelectorAll('a[href*="wa.me"]');
+  for (var i = 0; i < links.length; i++) {
+    var h = links[i].getAttribute("href");
+    if (h && h.indexOf("text=") !== -1 && h.indexOf("c%C3%B3digo%20de%20reserva") === -1 && h.indexOf("digo%20de%20reserva") === -1) {
+      links[i].setAttribute("href", h + extra);
+    }
+  }
+
+  // ---- Burbuja de cupos sobre el floater (urgencia honesta) ----
+  (function () {
+    var floater = document.querySelector(".wa-btn--floating");
+    if (!floater) return;
+    try { if (sessionStorage.getItem("cdo_cupos_closed")) return; } catch (e) {}
+    var bubble = document.createElement("div");
+    bubble.className = "cdo-cupos-bubble";
+    bubble.innerHTML =
+      '<button class="cdo-cupos-bubble__x" aria-label="Cerrar">&times;</button>' +
+      'Esta semana quedan <strong>pocos cupos</strong> para consulta gratuita. Aseguremos el tuyo 🕯️';
+    document.body.appendChild(bubble);
+    var timer = setTimeout(function () { bubble.classList.add("is-show"); }, 6500);
+    bubble.querySelector(".cdo-cupos-bubble__x").addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      bubble.classList.remove("is-show");
+      try { sessionStorage.setItem("cdo_cupos_closed", "1"); } catch (e) {}
+    });
+    bubble.addEventListener("click", function () { floater.click(); });
+  })();
+})();
