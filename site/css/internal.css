@@ -196,6 +196,19 @@
 }
 .cdo-gallery figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
 
+/* ---- Foto única del ritual dentro del contenido ---- */
+.cdo-figure { margin: var(--space-6) 0; }
+.cdo-figure img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+.cdo-figure figcaption { margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted); text-align: center; }
+
 /* ---- Contenido en filas de imagen + texto (alternadas) ---- */
 .cdo-features { padding: var(--section-y) 0; }
 .cdo-features__wrap { display: grid; gap: var(--space-8); }
