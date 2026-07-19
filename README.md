@@ -1,70 +1,82 @@
-# Clara de Oteiza — Home page (static)
+# Clara de Oteiza — sitio (site/)
 
-Production static build of the **claradeoteiza.com** home page, a framework-free
-recreation of the `project/home/` design prototype. Pure HTML + CSS + vanilla JS,
-no build step.
+Sitio estático completo de **claradeoteiza.com**. HTML + CSS + JS vanilla,
+**sin build**. Mobile-first. Conversión: WhatsApp.
 
-## Run locally
+> Brief operativo y reglas: **`../CLAUDE.md`**. Sistema de diseño: **`../DESIGN.md`**.
 
-Any static file server works — the page uses no bundler:
+## Correr localmente
+
+Las páginas internas usan **rutas absolutas**, así que hace falta un servidor:
 
 ```bash
 cd site
 python3 -m http.server 8000
-# open http://localhost:8000/
+# http://localhost:8000/
 ```
 
-Deploy by uploading the `site/` folder as-is to any static host (Netlify,
-Vercel, S3/CloudFront, Nginx, GitHub Pages, …).
-
-## Structure
+## Estructura
 
 ```
 site/
-  index.html          Full home page (semantic, works without JS)
+  index.html                         Home (rutas relativas)
+  amarres/index.html                 Hub de categoría  ┐
+    amarres-de-amor/index.html       Servicio          │ 5 categorías,
+    …                                (rutas absolutas)  │ 24 servicios
+  tarot-y-videncia/ …                                   │ en total
+  limpiezas-y-proteccion/ …                             │
+  rituales-y-trabajos/ …                                │
+  prosperidad-y-abundancia/ …        ┘
+  privacidad/  terminos/  aviso-legal/   Legales
   css/
-    styles.css        Design-system entry (imports the token files)
-    fonts.css         Manrope + DM Sans (Google Fonts)
-    colors.css        Warm-black / wine / gold color tokens
-    typography.css    Type scale + weights
-    layout.css        Spacing, radius, shadow, motion, z-index
-    base.css          Element defaults
-    home.css          Page styles (translated 1:1 from the prototype)
+    styles.css     entry (importa los tokens)
+    colors.css     tokens de color (violeta + dorado)   ← ver DESIGN.md
+    typography.css escala tipográfica (Manrope + DM Sans)
+    layout.css     spacing, radius, sombras, motion, z-index
+    base.css       defaults de elementos
+    fonts.css      @import de Google Fonts
+    home.css       estilos que cargan TODAS las páginas
+    internal.css   estilos SÓLO de páginas de servicio y categoría
   js/
-    data.js           Sitemap subset, services, derivador routing, testimonios
-    background.js      Animated gold-particle canvas backdrop
-    app.js            Header, mobile menu, scroll-reveal, derivador, scroller
-  assets/             Brand portraits, service photos, imagery, testimonio shots
+    data.js        árbol de páginas, servicios, routing del derivador, testimonios
+    background.js  canvas animado de fondo
+    app.js         header, menú, reveal, derivador, tracking WhatsApp + código de reserva
+    consent.js     gate de edad (18+) + cookies, Consent Mode v2
+  assets/          retratos de marca, fotos de servicios, imágenes, videos, favicon
+  robots.txt       permite todo + saluda a bots de LLMs; apunta al sitemap
+  sitemap.xml      las 33 URLs
 ```
 
-## Sections (top → bottom)
+## SEO / agéntico
 
-Header (sticky, blur-on-scroll) · Hero (gold-ringed portrait) · **Derivador**
-(interactive triage: chips + free-text keyword classification → routed internal
-links + WhatsApp CTA) · Sobre Clara (+ magia-blanca trust badge) · 6 Servicios
-cards · central CTA · Testimonios (horizontal WhatsApp-screenshot gallery) ·
-Instagram / TikTok social proof · legal disclaimer · Footer · floating WhatsApp
-button.
+- Cada página: `<title>`, `description`, canonical, Open Graph, favicon `✦`.
+- **JSON-LD** en las 33 páginas (ProfessionalService + WebSite; Service + FAQPage +
+  BreadcrumbList en servicios).
+- `robots.txt` habilita crawlers de buscadores y de LLMs (GPTBot, ClaudeBot,
+  PerplexityBot, etc.) y referencia `sitemap.xml`.
 
-## Behavior notes
+## Analytics / consentimiento
 
-- **Progressive enhancement:** all copy and links render without JavaScript. JS
-  adds the interactive Derivador, mobile menu, scroll-reveal, header blur, and
-  personalized WhatsApp messages (`data-wa-msg`).
-- **Accessibility / motion:** WCAG-AA contrast throughout; the animated
-  background, scroll reveals, and smooth scrolling all honor
-  `prefers-reduced-motion`.
-- **Testimonios rotation:** the prototype rotates a deterministic 6–8 subset per
-  page slug (for the 162 planned internal pages). This home page renders the
-  fixed `home`-slug subset (screenshots 16–20, 01–03). The rotation function
-  lives in `js/data.js` (`CDO.pickTestimonios`) for reuse on internal pages.
-- **Internal links** (service cards, derivador results) point at their planned
-  relative URLs (`/amarres/…`, `/tarot-y-videncia/…`); wire routing when the
-  internal pages are built.
+- **Consent Mode v2** default `denied` (inline en `<head>`, antes de GTM).
+- **GA4** `G-07W3W3044B` + **GTM** `GTM-TLMXCT79`. El GA4 se puede gestionar desde GTM.
+- `consent.js`: modal de mayoría de edad + cookies; al aceptar, actualiza el consent.
+- Evento de conversión: `whatsapp_click` (dataLayer) con `wa_source` + `wa_code`.
+  **Pendiente:** marcarlo como evento clave en GA4 (desde GTM/GA4).
+
+## Deploy (GitHub Pages, rama `gh-pages`)
+
+**Preview (subpath, hoy):** las rutas absolutas necesitan el prefijo del subpath.
+
+```bash
+python3 scripts/build_ghpages.py        # genera /tmp/ghpages-build con rutas /ClaraDeOteiza
+# publicar esa carpeta en la rama gh-pages (worktree o gh-pages deploy)
+```
+
+**Dominio propio (claradeoteiza.com, al conectar DNS):** ya no hace falta reescribir
+rutas — se publica `site/` **tal cual** en la rama `gh-pages` + un archivo **`CNAME`**
+con `claradeoteiza.com`. Ver pendientes de DNS en `../CLAUDE.md`.
 
 ## Config
 
-- **WhatsApp number:** `5491136746858` (from the brief), used in every CTA.
-- **Instagram:** `@ritualesdeamoreterno.ok` · **TikTok:** `@claradeoteiza`.
-- **Fonts:** Manrope + DM Sans via Google Fonts. To self-host, swap the `@import`
-  in `css/fonts.css` for local `@font-face` rules.
+- WhatsApp `5491136746858` · IG `@ritualesdeamoreterno.ok` · TikTok `@claradeoteiza`.
+- Para self-hostear fuentes: reemplazar el `@import` de `css/fonts.css` por `@font-face`.

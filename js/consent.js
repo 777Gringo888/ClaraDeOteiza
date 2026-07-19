@@ -38,7 +38,7 @@
           '<button class="cdo-consent__btn cdo-consent__btn--ghost" data-consent="essential">Solo lo esencial</button>' +
         '</div>' +
         '<button class="cdo-consent__minor" data-consent="minor">Soy menor de 18</button>' +
-        '<p class="cdo-consent__legal">Al entrar aceptás nuestra <a href="/ClaraDeOteiza/privacidad/">Política de Privacidad</a> y los <a href="/ClaraDeOteiza/terminos/">Términos</a>. Usamos cookies para analítica y publicidad.</p>' +
+        '<p class="cdo-consent__legal">Al entrar aceptás nuestra <a href="/privacidad/">Política de Privacidad</a> y los <a href="/terminos/">Términos</a>. Usamos cookies para analítica y publicidad.</p>' +
       '</div>';
     document.body.appendChild(wrap);
     document.documentElement.style.overflow = "hidden";
