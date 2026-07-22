@@ -78,5 +78,5 @@ con `claradeoteiza.com`. Ver pendientes de DNS en `../CLAUDE.md`.
 
 ## Config
 
-- WhatsApp `5491136746858` · IG `@ritualesdeamoreterno.ok` · TikTok `@claradeoteiza`.
+- WhatsApp `5491136746858` · TikTok `@claradeoteiza`.
 - Para self-hostear fuentes: reemplazar el `@import` de `css/fonts.css` por `@font-face`.
