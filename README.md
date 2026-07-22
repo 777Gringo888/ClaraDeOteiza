@@ -66,7 +66,7 @@ mano). Se conservan sólo como referencia histórica.
 ## Datos del proyecto
 
 - **WhatsApp:** `5491136746858` (en todos los CTAs).
-- **Instagram:** `@ritualesdeamoreterno.ok` (+123.000) · **TikTok:** `@claradeoteiza` (+25.000).
+- **TikTok:** `@claradeoteiza` (+25.000).
 - **Analytics:** GTM `GTM-TLMXCT79` + GA4 `G-07W3W3044B` (Consent Mode v2).
 - **Copy prohibido:** "garantizado", "100% efectivo", plazos fijos ("48 horas"),
   "doblegar", "dominar", "paga al ver resultados", "irrompible".

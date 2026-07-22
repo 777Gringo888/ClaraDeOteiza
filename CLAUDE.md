@@ -68,11 +68,11 @@ al conectar el dominio, se sirve `site/` tal cual en la raíz + archivo `CNAME`.
 - Primera persona (Clara), porteño, cálido y honesto. Nunca prometer resultados.
 - **Prohibido:** "garantizado", "100% efectivo", plazos fijos ("48 horas"),
   "doblegar", "dominar", "paga al ver resultados", "irrompible".
-- **Magia blanca** siempre (no causa daño). Números reales: IG +123.000, TikTok +25.000.
+- **Magia blanca** siempre (no causa daño). Números reales: TikTok +25.000.
 
 ## Datos
 
-- WhatsApp `5491136746858` · IG `@ritualesdeamoreterno.ok` · TikTok `@claradeoteiza`.
+- WhatsApp `5491136746858` · TikTok `@claradeoteiza`.
 - Dominio: **claradeoteiza.com** (registrado en Squarespace).
 
 ## Pendientes
