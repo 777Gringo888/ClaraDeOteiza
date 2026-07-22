@@ -206,15 +206,6 @@
     return out;
   }
 
-  var INSTAGRAM = [
-    "assets/imagery/altar-velas-fuego.jpg",
-    "assets/imagery/amarres-rojos.jpg",
-    "assets/imagery/altar-velas-rosas.jpg",
-    "assets/imagery/altar-angeles.jpg",
-    "assets/services/rituales-y-trabajos.webp",
-    "assets/services/amarres-de-amor.webp"
-  ];
-
   window.CDO = {
     PHONE: PHONE,
     wa: wa,
@@ -226,9 +217,6 @@
     SERVICES: SERVICES,
     TESTIMONIOS: TESTIMONIOS,
     pickTestimonios: pickTestimonios,
-    INSTAGRAM: INSTAGRAM,
-    IG_URL: "https://www.instagram.com/ritualesdeamoreterno.ok/",
-    IG_HANDLE: "@ritualesdeamoreterno.ok",
     TIKTOK_URL: "https://www.tiktok.com/@claradeoteiza",
     TIKTOK_HANDLE: "@claradeoteiza",
     SLUG: (window.CDO_SLUG || "home")
