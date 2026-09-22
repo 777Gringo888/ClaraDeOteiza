@@ -168,22 +168,22 @@
   var SERVICES = [
     { id: "amarres", title: "Amarres de Amor", image: "assets/services/amarres-de-amor.webp",
       desc: "Rituales personalizados para fortalecer, recuperar y proteger vínculos afectivos. Cada caso se evalúa individualmente.",
-      href: "/amarres/", waMsg: "Hola Clara, quiero una consulta sobre amarres de amor." },
+      href: "/amarres/", waMsg: "Hola Clara, quiero reservar una consulta sobre amarres de amor." },
     { id: "amor", title: "Amor y Parejas", image: "assets/services/amor-y-parejas.webp",
       desc: "Retorno de pareja, endulzamientos, reconexión afectiva y armonización de vínculos. Trabajo integral sobre la relación.",
-      href: "/amarres/", waMsg: "Hola Clara, quiero una consulta sobre amor y parejas." },
+      href: "/amarres/", waMsg: "Hola Clara, quiero reservar una consulta sobre amor y parejas." },
     { id: "tarot", title: "Tarot y Videncia", image: "assets/services/tarot-y-videncia.webp",
       desc: "Lecturas personalizadas para comprender tu situación, tomar decisiones y encontrar claridad en momentos difíciles.",
-      href: "/tarot-y-videncia/", waMsg: "Hola Clara, quiero una consulta de tarot y videncia." },
+      href: "/tarot-y-videncia/", waMsg: "Hola Clara, quiero reservar una consulta de tarot y videncia." },
     { id: "limpiezas", title: "Limpiezas y Protección", image: "assets/services/limpiezas-y-proteccion.jpg",
       desc: "Limpieza energética, corte de daños, desamarres y protección espiritual. Restablecé tu equilibrio.",
-      href: "/limpiezas-y-proteccion/", waMsg: "Hola Clara, quiero una consulta sobre limpiezas y protección." },
+      href: "/limpiezas-y-proteccion/", waMsg: "Hola Clara, quiero reservar una consulta sobre limpiezas y protección." },
     { id: "prosperidad", title: "Prosperidad y Dinero", image: "assets/services/prosperidad-y-dinero.webp",
       desc: "Apertura de caminos, desbloqueo laboral y trabajo energético para negocios. Removemos lo que traba tu crecimiento.",
-      href: "/prosperidad-y-abundancia/", waMsg: "Hola Clara, quiero una consulta sobre prosperidad y dinero." },
+      href: "/prosperidad-y-abundancia/", waMsg: "Hola Clara, quiero reservar una consulta sobre prosperidad y dinero." },
     { id: "rituales", title: "Rituales y Trabajos", image: "assets/services/rituales-y-trabajos.webp",
       desc: "Trabajos energéticos a medida según cada caso. Clara evalúa tu situación antes de recomendar cualquier ritual.",
-      href: "/rituales-y-trabajos/", waMsg: "Hola Clara, quiero una consulta sobre rituales y trabajos." }
+      href: "/rituales-y-trabajos/", waMsg: "Hola Clara, quiero reservar una consulta sobre rituales y trabajos." }
   ];
 
   // 20 testimonial screenshots
@@ -209,8 +209,8 @@
   window.CDO = {
     PHONE: PHONE,
     wa: wa,
-    WA_DEFAULT: wa("Hola Clara, me gustaría hacer una consulta."),
-    WA_FLOAT: wa("Hola Clara, quiero hacer una consulta."),
+    WA_DEFAULT: wa("Hola Clara, quiero reservar una consulta personalizada."),
+    WA_FLOAT: wa("Hola Clara, quiero reservar una consulta personalizada."),
     CHIPS: CHIPS,
     classify: classify,
     chipById: chipById,

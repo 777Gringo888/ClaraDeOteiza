@@ -40,7 +40,7 @@ site/
   js/
     data.js        árbol de páginas, servicios, routing del derivador, testimonios
     background.js  canvas animado de fondo
-    app.js         header, menú, reveal, derivador, tracking WhatsApp + código de reserva
+    app.js         header, menú, reveal, derivador, tracking WhatsApp + línea de cupo semanal
     consent.js     gate de edad (18+) + cookies, Consent Mode v2
   assets/          retratos de marca, fotos de servicios, imágenes, videos, favicon
   robots.txt       permite todo + saluda a bots de LLMs; apunta al sitemap
@@ -60,23 +60,16 @@ site/
 - **Consent Mode v2** default `denied` (inline en `<head>`, antes de GTM).
 - **GA4** `G-07W3W3044B` + **GTM** `GTM-TLMXCT79`. El GA4 se puede gestionar desde GTM.
 - `consent.js`: modal de mayoría de edad + cookies; al aceptar, actualiza el consent.
-- Evento de conversión: `whatsapp_click` (dataLayer) con `wa_source` + `wa_code`.
-  **Pendiente:** marcarlo como evento clave en GA4 (desde GTM/GA4).
+- Evento de conversión: `whatsapp_click` (dataLayer) con `wa_source`. Es evento
+  clave en GA4 y se importa como conversión en Google Ads (`AW-18226437188`).
 
 ## Deploy (GitHub Pages, rama `gh-pages`)
 
-**Preview (subpath, hoy):** las rutas absolutas necesitan el prefijo del subpath.
-
-```bash
-python3 scripts/build_ghpages.py        # genera /tmp/ghpages-build con rutas /ClaraDeOteiza
-# publicar esa carpeta en la rama gh-pages (worktree o gh-pages deploy)
-```
-
-**Dominio propio (claradeoteiza.com, al conectar DNS):** ya no hace falta reescribir
-rutas — se publica `site/` **tal cual** en la rama `gh-pages` + un archivo **`CNAME`**
-con `claradeoteiza.com`. Ver pendientes de DNS en `../CLAUDE.md`.
+Producción: **https://claradeoteiza.com/**. Se publica `site/` **tal cual** en la
+raíz de la rama `gh-pages`, que además conserva `CNAME` (claradeoteiza.com) y
+`.nojekyll`. Push de `gh-pages` = sitio online en ~1 minuto.
 
 ## Config
 
-- WhatsApp `5491136746858` · TikTok `@claradeoteiza`.
+- WhatsApp `5491136746858` · IG `@ritualesdeamoreterno.ok` · TikTok `@claradeoteiza`.
 - Para self-hostear fuentes: reemplazar el `@import` de `css/fonts.css` por `@font-face`.
