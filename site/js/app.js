@@ -92,7 +92,7 @@
 
     function waFor(data) {
       var tema = data.label ? "mi tema es: " + data.label.toLowerCase() + ". " : "";
-      return CDO.wa("Hola Clara, " + tema + "me gustaría una consulta gratuita.");
+      return CDO.wa("Hola Clara, " + tema + "quiero reservar una consulta personalizada.");
     }
 
     function renderResult(data) {
@@ -271,39 +271,18 @@
 })();
 
 /* ============================================================
-   CRO — Código de reserva + urgencia (cupos)
+   CRO — Línea de cupo semanal + urgencia (cupos)
    Corre en todas las páginas (script al final del body).
    ============================================================ */
 (function () {
   "use strict";
 
-  // ---- Código de reserva único = ref (prefijo de categoría + aleatorio) ----
-  function genRand() {
-    var s = "ABCDEFGHJKMNPQRSTUVWXYZ23456789", c = "";
-    for (var i = 0; i < 4; i++) c += s.charAt(Math.floor(Math.random() * s.length));
-    return c;
-  }
-  function catPrefix() {
-    var p = location.pathname.toLowerCase();
-    var map = {
-      "amarres": "AMR", "tarot-y-videncia": "TAR", "limpiezas-y-proteccion": "LIM",
-      "prosperidad-y-abundancia": "PRO", "rituales-y-trabajos": "RIT"
-    };
-    // busca la categoría en cualquier parte del path (robusto a subcarpeta de preview)
-    for (var k in map) { if (p.indexOf(k) !== -1) return map[k]; }
-    return "CDO";
-  }
-  var CODE = catPrefix() + "-" + genRand();
-
-  // Anexar al mensaje: instrucción clara (código de reserva de consulta gratis) + UN solo código
-  var extra = encodeURIComponent(
-    "\n\nMi código de reserva de consulta gratis es #" + CODE +
-    ". Envío este mensaje para entrar en el cupo de consultas de esta semana."
-  );
+  // Anexar al mensaje la línea del cupo semanal (una sola vez por link)
+  var extra = encodeURIComponent("\n\nTe escribo para entrar en el cupo de consultas de esta semana.");
   var links = document.querySelectorAll('a[href*="wa.me"]');
   for (var i = 0; i < links.length; i++) {
     var h = links[i].getAttribute("href");
-    if (h && h.indexOf("text=") !== -1 && h.indexOf("reserva%20de%20consulta") === -1) {
+    if (h && h.indexOf("text=") !== -1 && h.indexOf("cupo%20de%20consultas") === -1) {
       links[i].setAttribute("href", h + extra);
     }
   }
@@ -317,7 +296,7 @@
     bubble.className = "cdo-cupos-bubble";
     bubble.innerHTML =
       '<button class="cdo-cupos-bubble__x" aria-label="Cerrar">&times;</button>' +
-      'Esta semana quedan <strong>pocas consultas gratis</strong>. Aseguremos la tuya 🕯️';
+      'Esta semana quedan <strong>pocos cupos de consulta</strong>. Aseguremos el tuyo 🕯️';
     document.body.appendChild(bubble);
     // aparece con la INTERACCIÓN: cuando la persona scrollea y ya se enganchó
     var shown = false;

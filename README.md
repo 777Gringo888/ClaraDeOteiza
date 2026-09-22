@@ -8,12 +8,12 @@ Sitio estático (HTML + CSS + JS vanilla, **sin build**), optimizado mobile-firs
 (≈80% del tráfico) y con un fuerte trabajo de **CRO** (conversion rate
 optimization).
 
-## Estado: ✅ terminado y en línea (preview)
+## Estado: ✅ terminado y online en https://claradeoteiza.com/
 
 - **33 páginas**: home + 5 hubs de categoría + 24 páginas de servicio + 3 legales
   (privacidad, términos, aviso legal).
-- Preview en GitHub Pages: <https://777gringo888.github.io/ClaraDeOteiza/>
-- Dominio final: **claradeoteiza.com** (pendiente sólo el DNS).
+- Versión vigente: **v2.0 "consulta personalizada"** (tags `v2.0-consulta-personalizada*`).
+- Versión anterior restaurable: **v1.0 "consulta gratis"** (tags `v1.0-consulta-gratis*`).
 
 ## Estructura del repo
 
@@ -32,7 +32,7 @@ site/                     ← EL SITIO (fuente de verdad). Empezá por site/READ
   css/  js/  assets/       (detallado en site/README.md)
 CLAUDE.md                 Brief operativo (Claude Code lo lee solo) — leer para retomar
 DESIGN.md                 Sistema de diseño + patrones CRO (leer antes de tocar UI)
-scripts/build_ghpages.py  Script de deploy al preview (subpath)
+scripts/build_ghpages.py  Deploy viejo al preview en subpath (ya no se usa)
 
 gen_*.py, icon_lib.py     ⚠️ Andamiaje de UNA sola vez (ver nota abajo)
 design_handoff_velas_animadas/   Referencia de diseño (efecto de velas), ya implementado
@@ -51,8 +51,8 @@ python3 -m http.server 8000
 
 ## Deploy
 
-El sitio se publica en la rama **`gh-pages`** (GitHub Pages). Hoy sirve en el
-subpath de preview; al conectar el dominio pasa a la raíz de claradeoteiza.com.
+El sitio se publica en la rama **`gh-pages`** (GitHub Pages), en la raíz de
+claradeoteiza.com.
 Detalle del flujo de deploy en `site/README.md`.
 
 ## ⚠️ Sobre los generadores (`gen_*.py`, `icon_lib.py`)

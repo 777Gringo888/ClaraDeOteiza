@@ -113,14 +113,14 @@ servicio, prueba social, píldora de urgencia, grilla de tarjetas `.cdo-card`
 - **Derivador** (home): chips + texto libre → clasifica contra el árbol de páginas
   (`CDO.classify` en `data.js`) y sugiere la más específica. Debajo, un bloque fijo
   explica "te atiende Clara en persona · cupos limitados" + botón.
-- **Urgencia = escasez del beneficio gratis:** el mensaje unificado es
-  **"las consultas gratis tienen cupos limitados por semana"**. Aparece en la píldora
+- **Urgencia = cupos limitados:** Clara atiende **pocas consultas por semana**
+  (la consulta se cobra: nunca decir "gratis"). Aparece en la píldora
   del hero, la barra de beneficios, el microcta, el derivador, el CTA final y la
   burbuja flotante. **El hero de la home va limpio** (sin urgencia): la urgencia
   aparece cuando la persona ya se está decidiendo.
-- **Mensaje de WhatsApp:** instrucción clara + **un solo** código de reserva
-  (lo arma `app.js`). Ver regla 3 en `CLAUDE.md`.
-- **Prueba social real:** IG +123.000 · TikTok +25.000 (números confirmados).
+- **Mensaje de WhatsApp:** "Hola Clara, quiero reservar una consulta sobre <tema>."
+  + la línea del cupo semanal (la agrega `app.js`). Ver regla 3 en `CLAUDE.md`.
+- **Prueba social real:** TikTok +25.000 likes (Instagram bloqueado, retirado).
 
 ---
 

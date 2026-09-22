@@ -11,9 +11,10 @@ tráfico). **La conversión es siempre WhatsApp.** Marca oscura, mística,
 **violeta + dorado** (candlelit). Voz de Clara en **primera persona**, tono
 **porteño**, cálido y serio.
 
-Estado: **terminado**. 33 páginas (home + 5 categorías + 24 servicios + 3 legales).
-Vive en GitHub Pages (rama `gh-pages`). Pendiente: **DNS** del dominio y marcar la
-conversión `whatsapp_click` en GA4.
+Estado: **terminado y online** en https://claradeoteiza.com/. 33 páginas (home +
+5 categorías + 24 servicios + 3 legales). GitHub Pages, rama `gh-pages`.
+Versión vigente: **v2.0 "consulta personalizada"** (22/09/2026). La consulta con
+Clara **se cobra**: el sitio no menciona nada gratis.
 
 ## Fuente de verdad ⚠️
 
@@ -29,9 +30,14 @@ cd site && python3 -m http.server 8000     # http://localhost:8000/
 ```
 Las páginas internas usan **rutas absolutas** → hace falta servidor (no doble-click).
 
-Deploy: se publica la carpeta `site/` en la rama `gh-pages`. Ver `site/README.md`.
-Hoy sirve en subpath de preview (`/ClaraDeOteiza/`) vía `scripts/build_ghpages.py`;
-al conectar el dominio, se sirve `site/` tal cual en la raíz + archivo `CNAME`.
+Deploy: el contenido de `site/` se copia **tal cual** a la raíz de la rama
+`gh-pages`, conservando `CNAME` (claradeoteiza.com) y `.nojekyll`. Commit + push de
+`gh-pages` = producción. `scripts/build_ghpages.py` era para el preview en subpath
+y **ya no se usa**.
+
+Versiones: antes de cada paquete de cambios se crea un tag por versión
+(`vX.Y-nombre` sobre `gh-pages` y `vX.Y-nombre-fuente` sobre `main`) para poder
+restaurar.
 
 ## Arquitectura
 
@@ -51,17 +57,16 @@ al conectar el dominio, se sirve `site/` tal cual en la raíz + archivo `CNAME`.
    el favicon, el JSON-LD, y `<link>` a `styles.css` + `home.css` (+ `internal.css`
    si es servicio/categoría). Cargá al final del body: `data.js`, `background.js`,
    `app.js`, `consent.js`.
-2. **Deploy al preview:** `scripts/build_ghpages.py` reescribe rutas con el prefijo
-   `/ClaraDeOteiza`. Por eso **evitá literales `"/"` sueltos en JS** (los mangla).
-   En `app.js`, el prefijo de categoría se busca con `path.indexOf(k)` sin `/` inicial.
-3. **Un solo código** en el mensaje de WhatsApp. Lo arma `app.js` (IIFE de reserva):
-   `Mi código de reserva de consulta gratis es #<CAT>-<rnd>. Envío este mensaje para
-   entrar en el cupo de consultas de esta semana.` El evento `whatsapp_click`
-   (dataLayer, para GTM/GA4) **lee ese mismo código** — no inyectar un segundo.
-4. **Urgencia:** el mensaje es **"las consultas gratis tienen cupos limitados por
-   semana"** (lo escaso es el beneficio gratis). No poner urgencia de "semana" en el
-   hero de la home (va limpio); la urgencia vive en el derivador, la barra de
-   beneficios, la píldora de servicios/categoría, el CTA final y la burbuja flotante.
+2. **Nada gratis.** La consulta se cobra: no usar "gratis", "gratuita" ni "sin
+   costo" en ningún texto, mensaje, meta o schema. "Sin compromiso" solo en las FAQs.
+3. **Mensaje de WhatsApp:** `Hola Clara, quiero reservar una consulta sobre <tema>.`
+   (en `data-wa-msg` y en el `href`). `app.js` le agrega una sola vez la línea
+   `Te escribo para entrar en el cupo de consultas de esta semana.` Sin códigos de
+   reserva. El evento `whatsapp_click` (dataLayer) se dispara igual en cada click.
+4. **Urgencia = cupos:** Clara atiende pocas consultas por semana ("Pocos cupos por
+   semana", "Atiendo pocas consultas por semana"). El hero de la home va limpio; la
+   urgencia vive en el derivador, la barra de beneficios, la píldora de
+   servicios/categoría, el CTA final y la burbuja flotante.
 
 ## Copy / voz
 
@@ -77,6 +82,4 @@ al conectar el dominio, se sirve `site/` tal cual en la raíz + archivo `CNAME`.
 
 ## Pendientes
 
-1. **DNS** → apuntar claradeoteiza.com a GitHub Pages (registros A + CNAME `www`) y
-   dar vuelta el deploy a la raíz + `CNAME`.
-2. **GA4** → marcar `whatsapp_click` como evento clave (conversión) desde GTM/GA4.
+Ninguno. DNS conectado y `whatsapp_click` marcado como evento clave en GA4.
